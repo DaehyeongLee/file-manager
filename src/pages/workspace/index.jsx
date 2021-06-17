@@ -1,11 +1,12 @@
 import React from 'react';
 
 import Header from './containers/Header';
+import FileUpload from './containers/FileUpload';
 
 const Workspace = () => (
 	<div>
 		<Header />
-		<div>workspace</div>
+		<FileUpload />
 	</div>
 );
 
