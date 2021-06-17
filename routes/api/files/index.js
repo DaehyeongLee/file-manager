@@ -55,9 +55,6 @@ router.post('/unzip', (req, res) => {
 		.on('entry', function (entry) {
 			var fileName = entry.path;
 			var type = entry.type; // 'Directory' or 'File'
-	
-			console.log('server-filename', fileName)
-			console.log('server-type', type)
 		
 			fileInfo.push({name: fileName, fileType: type})
 		

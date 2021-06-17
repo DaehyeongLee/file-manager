@@ -1,6 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import CenterLayout from 'components/CenterLayout';
+
+//import CenterLayout from 'components/CenterLayout';
+import style from './style.scss';
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+
 
 
 class FileUpload extends React.Component {
@@ -10,7 +14,10 @@ class FileUpload extends React.Component {
 		this.state = { 
 			file : {},
 			filePath: "",
-			fileName: ""
+			fileName: "",
+			fileList: [],
+			toggleTextArea: false,
+			clickedItem: ""
 		}
 		
 		this.onFormSubmit = this.onFormSubmit.bind(this)
@@ -45,9 +52,10 @@ class FileUpload extends React.Component {
 					fileName : response.data.fileName
 				});
 				
-				axios.post('/api/files/unzip', this.state).then((response)=> {
+				axios.post('/api/files/unzip', {filePath: this.state.filePath}).then((response)=> {
 					if(response.data.success) {
 						console.log("response.data.fileInfo", response.data.fileInfo);
+						this.setState({fileList: response.data.fileInfo})
 					} else {
 						alert('압축을 해제하는데 실패했습니다.')
 					}
@@ -61,16 +69,66 @@ class FileUpload extends React.Component {
 		
 	} 
 	
-
+	onClick (value) {
+		console.log("value", value)
+		
+		//Click시 Textarea 보이도록 함
+		this.setState({toggleTextArea: true, clickedItem: value})
+		
+		//파일안 내용 불러오기
+	}
+	
 	render() {
+		
+		const renderFileList = this.state.fileList.map((item, index) => {
+			
+			console.log(item)
+			
+			//Type: File
+			if (item.fileType == 'File')
+				return (<li onClick={(value) => this.onClick(item.name)} key={index}>{item.name}</li>)
+			else //Type: Directory
+				return (<li key={index}>{item.name}</li>)
+		
+		});
+		
+		
 		return (
-			<CenterLayout>
-				<form onSubmit={this.onFormSubmit}>
-					<h1>File Upload</h1>
-					<input type="file" onChange={this.onChange}/>
-					<button type="submit">Upload</button>
-				</form>
-			</CenterLayout>
+			<div className = {style.FileUpload}>
+				<legend>File Upload</legend>
+				<div className = {style.leftSide}>
+					<Form onSubmit={this.onFormSubmit}>
+						<FormGroup>
+							<Label for="file">File</Label>
+							<Input type="file" id="file" onChange={this.onChange}/>
+						</FormGroup>
+						<FormGroup>
+							<Button type="submit">Upload</Button>
+						</FormGroup>
+						
+					</Form>	
+					<div>
+						<ul>
+							{renderFileList}
+						</ul>
+					</div>	
+					
+				</div>
+				<div className = {style.rightSide}>
+					{this.state.toggleTextArea &&
+						<Form>
+							<FormGroup>
+								<Label for="textarea">Text Area</Label>
+								<Input type="textarea" name="text" id="textarea" />
+							</FormGroup>
+							<FormGroup>
+								<Button type="submit">Save</Button>
+							</FormGroup>
+						</Form>					
+					}
+				</div>
+				
+			</div>
 		);
 	}
 }

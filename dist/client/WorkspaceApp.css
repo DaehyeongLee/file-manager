@@ -13,16 +13,16 @@
     color: #fff;
     cursor: pointer; }
 
-.style__CenterLayout__2CComQ > *:not(:last-child) {
-  margin-bottom: 1rem; }
+.style__FileUpload__1wlpfM {
+  width: 80%; }
 
-.style__CenterLayout_wrapper__2en7Oz {
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-  background-color: #F5F5F5; }
+.style__leftSide__2CGnH2 {
+  width: 18.75rem;
+  padding: 10px 20px;
+  float: left; }
+
+.style__rightSide__1wNX28 {
+  width: 30rem;
+  padding: 10px 20px;
+  float: right; }
 
