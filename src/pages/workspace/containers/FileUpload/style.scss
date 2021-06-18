@@ -1,13 +1,25 @@
-.FileUpload {
+.FileUploadPage {
 	width: 80%;
-}
-.leftSide {
-	width: 10rem;
+	padding: 20px;
+	
+	&__leftSide {
+	width: 13rem;
 	padding: 10px 20px;
 	float: left;
-}
-.rightSide {
+		&__li_file {
+			color: #1a73e8;
+			cursor: pointer;
+		}	
+	}
+	
+	&__rightSide {
 	width: 30rem;
 	padding: 10px 20px;
 	float: right;
+		&__textarea {
+			height: 13rem !important;
+		}
+	}
 }
+
+

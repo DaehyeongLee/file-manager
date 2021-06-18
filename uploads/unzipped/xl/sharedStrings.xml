@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" count="2001" uniqueCount="773"><si><t>Test Case Name:</t></si><si><t xml:space="preserve">Worklist </t></si><si><t>Test Case ID</t></si><si><t>Description:</t></si><si><t>Status:</t></si><si><t>Overall Pass Criteria:</t></si><si><t>Test Information</t></si><si><t>Name of Tester:</t></si><si><t>Date:</t></si><si><t>Build Number:</t></si><si><t>Time:</t></si><si><t>Test Box Name:</t></si><si><t>O/S:</t></si><si><t>Comments</t></si><si><t>Browser:</t></si><si><t>Prerequisite</t><phoneticPr fontId="6" type="noConversion"/></si><si><t>Start the process at AppDev Studio</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>steps</t></si><si><t>Number of steps complete by status:</t></si><si><t>% Complete:</t></si><si><t>Step</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Action</t></si><si><t>Expected Result</t></si><si><t>Pass</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Fail</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Ticket #</t><phoneticPr fontId="2" type="noConversion"/></si><si><r><rPr><sz val="10"/><color theme="0"/><rFont val="Segoe UI Symbol"/><family val="2"/></rPr><t>●</t></r><r><rPr><sz val="10"/><color theme="0"/><rFont val="Arial"/><family val="2"/></rPr><t xml:space="preserve"> Test Stage:  Cases when changing workitem opening option (new window vs modal popup)</t></r><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 1: Create new workspace</t></si><si><t>Click on Project Manager from top toolbar</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Project Manager modal opens</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'Create New Work Space' </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>New WorkSpace' modal opens</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Simple Form' as name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name field displays entered text 'Simple Form'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Simple Form' as Description</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field displays entered text 'Simple Form'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Save' button</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Confirmation popup appears</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Ok'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Modal closes, and 'Simple Form' workspace is created</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 2: Create new project</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Simple Form' workspace from the list</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name and Description of the workspace is shown</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click '+ New Project'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>New Project' modal opens</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Modal closes, and 'Simple Form' project is created</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 3: Create new form</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Simple Form' project</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name and Description of the project is shown</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click '+ New form' </t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve"> 'New Form' modal opens</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Personal Information' as name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name field displays entered text 'Personal Information'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Personal Information' as Description</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field displays entered text 'Personal Information'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Modal closes, and 'Personal Information' form is created</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 4: Create new block</t></si><si><t xml:space="preserve">Click '+ New block' </t></si><si><t xml:space="preserve"> 'New block' modal opens</t></si><si><t>Enter 'Extend CSS&amp;JS Block' as name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name field displays entered text 'Extend CSS&amp;JS Block'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Extend CSS&amp;JS Block' as Description</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field displays entered text 'Extend CSS&amp;JS Block'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Modal closes, and 'Extend CSS&amp;JS Block' block is created</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Alreardy created own workspace / project / form / block at the Project Manager</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Alreardy checked-out the Data Modeler</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Start the process at Data Modeler. You can open Data Modeler by clicking the small button at top left of AppDev (AppDev's Studio to be specific)</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 1: First Name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click on the 'new entity' button at the top of the 'entity/group' window</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>New entity modal opens</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'First Name' as name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name field displays entered text 'First Name'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'First Name' as description</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field displays entered text 'First Name'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Select String from type dropdown</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Dropdown displays String as selected value and data length entry appears</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'true' at the 'Transient' </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Radio button true selected</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter '100' as Data Length</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Data Length field displays entered text '100'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Add'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Entity named 'First Name' created</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 2: Middle Name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Middle Name' as name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name field displays entered text 'Middle Name'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Middle Name' as description</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field displays entered text 'Middle Name'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Entity named 'Middle Name' created</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 3: Last Name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Last Name' as name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name field displays entered text 'Last Name'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Last Name' as description</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field displays entered text 'Last Name'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Entity named 'Last Name' created</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 4: Full Name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Full Name' as name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name field displays entered text 'Full Name'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Last Name+,+Middle Name+First Name' as description</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field displays entered text 'Last Name+,+Middle Name+First Name'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'true' at the 'Read Only' </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Entity named 'Full Name' created</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 5: State</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'State' as name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name field displays entered text 'State'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'State' as description</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field displays entered text 'State'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Select Lookup from type dropdown</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Dropdown displays Lookup as selected value and 'Lookup' dropdown appears</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Select 'USA_State' from LookUp dropdown</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Dropdown displays 'USA_State' as selected value</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Entity named 'State' created</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 6: City</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'City' as name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name field displays entered text 'City'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'City' as description</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field displays entered text 'City'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Check 'Dependency'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Dependency check box is checked, and 'Dependency Entity' dropdown appears</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Select 'State' from Dependency Entity</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Dropdown displays State as selected value</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Entity named 'City' created</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 7: Zip Code</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Zip Code' as name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name field displays entered text 'Zip Code'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Zip Code' as description</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field displays entered text 'Zip Code'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Select Integer from type dropdown</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Dropdown displays Integer as selected value </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Entity named 'Zip Code' created</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 8: Address</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Address' as name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name field displays entered text 'Address'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Address' as description</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field displays entered text 'Address'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Entity named 'Address' created</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 9: Phone</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Phone' as name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name field displays entered text 'Phone'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Phone' as description</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field displays entered text 'Phone'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter '20' as Data Length</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Data Length field displays entered text '20'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Entity named 'Phone' created</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 10: Email Address</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Email Address' as name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name field displays entered text 'Email Address'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Email Address' as description</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field displays entered text 'Email Address'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Entity named 'Email Address' created</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 11: Gender</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Gender' as name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name field displays entered text 'Gender'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Gender' as description</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field displays entered text 'Gender'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Entity named 'Gender' created</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 12: Date of Birth</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Date of Birth' as name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name field displays entered text 'Date of Birth'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Date of Birth' as description</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field displays entered text 'Date of Birth'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Select Date from type dropdown</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Dropdown displays Date as selected value </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Entity named 'Date of Birth' created</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 13: Age</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Age' as name</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Name field displays entered text 'Age'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Age' as description</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field displays entered text 'Age'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Entity named 'Age' created</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Save' button at the top of the window</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'OK'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>All entities are saved</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Alreardy created own workspace / project / form / block at the Project Manager</t></si><si><t>Aleardy created entity groups &amp; entities</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Start the process at Data Modeler - Component Tab</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Case 1: First Name </t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'First Name'  </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>List of component groups appears on Component List</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Fields' from Component List</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Fields expands, and components under 'Fields' are shown </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag 'Input Text' to 'Drop here Component'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Component name appears beside the entity and Preview displays the component</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Apply' on the buttom of the window</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Popup appears and says "Successfully applied"</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Case 2: Middle Name </t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'Middle Name'  </t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Case 3: Last Name </t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'Last Name'  </t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Case 4: Full Name </t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'Full Name'  </t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'State'  </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag 'Dropdown' to 'Drop here Component'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'City'  </t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'Zip Code'  </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 8: Street Address</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'Address'  </t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'Phone'  </t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'Email Address'  </t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'Gender'  </t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'Date of Birth'  </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Calendar' from Component List</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Calendar expands, and components under 'Calendar' are shown </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag 'Date Picker' to 'Drop here Component'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'Age'  </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag 'Input Number' to 'Drop here Component'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Simple Form - Relationship</t></si><si><t>All entities are mapped with components</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Start the process at Data Modeler - Relationship Tab</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 1: Full Name - Relationship</t></si><si><t xml:space="preserve">Click 'New Relationship' </t><phoneticPr fontId="13" type="noConversion"/></si><si><t>Able to type in 'Relation Name' and 'Description' field</t><phoneticPr fontId="13" type="noConversion"/></si><si><t>Enter 'Full Name' to relation name</t></si><si><t>Relation Name field displays entered text 'Full Name'</t><phoneticPr fontId="13" type="noConversion"/></si><si><t>Enter 'Generate full name with first, middle and last name' to description</t></si><si><t>Description field displays entered text 'Generate full name with first, middle and last name'</t></si><si><t>Drag 'First Name' to 'Drag here to add(Source)'</t><phoneticPr fontId="13" type="noConversion"/></si><si><t>First Name' is added as 'source.a'</t><phoneticPr fontId="13" type="noConversion"/></si><si><t>Drag 'Middle Name' to 'Drag here to add(Source)'</t><phoneticPr fontId="13" type="noConversion"/></si><si><t>Middle Name' is added as 'source.b'</t><phoneticPr fontId="13" type="noConversion"/></si><si><t>Drag 'Last Name' to 'Drag here to add(Source)'</t><phoneticPr fontId="13" type="noConversion"/></si><si><t>Last Name' is added as 'source.c'</t><phoneticPr fontId="13" type="noConversion"/></si><si><t>Drag 'Full Name' to 'Drag here to add(Target)'</t><phoneticPr fontId="13" type="noConversion"/></si><si><t>Full Name' is added as 'target.a'</t><phoneticPr fontId="13" type="noConversion"/></si><si><t xml:space="preserve">Click 'Add Calculation' </t><phoneticPr fontId="13" type="noConversion"/></si><si><t>Function field and target dropdown appear under Calculation</t><phoneticPr fontId="13" type="noConversion"/></si><si><t>Enter 
+'var name= "";
+if(source.c) name += source.c + ", ";
+if(source.b) name += source.b + " ";
+if(source.a) name += source.a;
+name; ' as function</t></si><si><t>Function field displays entered text 
+var name= "";
+if(source.c) name += source.c + ", ";
+if(source.b) name += source.b + " ";
+if(source.a) name += source.a;
+name;</t></si><si><t>Select 'target.a' from target dropdown</t><phoneticPr fontId="13" type="noConversion"/></si><si><t xml:space="preserve">Dropdown displays 'target.a' as selected value </t><phoneticPr fontId="13" type="noConversion"/></si><si><t>Click 'Apply' on the buttom of the window</t><phoneticPr fontId="13" type="noConversion"/></si><si><t>Popup appears and says "Successfully applied"</t><phoneticPr fontId="13" type="noConversion"/></si><si><t>Click Save button top right of the modeler panel</t></si><si><t>save relationship in modeler</t></si><si><t>Click Publisth buutton top right of the modeler panel</t></si><si><t>relationship pulish to AppDev studio</t></si><si><t>Case 2: Address - Relationship</t></si><si><t>Able to type in 'Relation Name' and 'Description' field</t></si><si><t>Enter 'Address' to relation name</t></si><si><t>Relation Name field displays entered text 'Address'</t></si><si><t>Enter 'Generate address with State, City and Zip Code' to description</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field displays entered text 'Generate address with State, City and Zip Code'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag 'State' to 'Drag here to add(Source)'</t></si><si><t>State' is added as 'source.a'</t></si><si><t>Drag 'City' to 'Drag here to add(Source)'</t></si><si><t>City' is added as 'source.b'</t></si><si><t>Drag 'Zip Code' to 'Drag here to add(Source)'</t></si><si><t>Zip Code' is added as 'source.c'</t></si><si><t>Drag 'Address' to 'Drag here to add(Target)'</t></si><si><t>Address' is added as 'target.a'</t></si><si><t>Enter 
+'var address= "";
+if(source.a) address += source.a.value + ", ";
+if(source.b) address += source.b.label + ", ";
+if(source.c) address += source.c;
+address;' as function</t></si><si><t>Function field displays entered text 
+var address= "";
+if(source.a) address += source.a.value + ", ";
+if(source.b) address += source.b.label + ", ";
+if(source.c) address += source.c;
+address;</t></si><si><t>Case 3: Age - Relationship</t></si><si><t>Enter 'Age' to relation name</t></si><si><t>Relation Name field displays entered text 'Age'</t></si><si><t>Enter 'Automatically calculate age when date of birth is selected' to description</t></si><si><t>Description field displays entered text 'Automatically calculate age when date of birth is selected</t></si><si><t>Drag 'Date of Birth' to 'Drag here to add(Source)'</t></si><si><t>Date of Birth' is added as 'source.a'</t></si><si><t>Drag 'Age' to 'Drag here to add(Target)'</t></si><si><t>Age' is added as 'target.a'</t></si><si><t>Enter 
+var date = new Date()
+var birth = new Date(source.a)
+if(date &amp;&amp; birth) {
+  var age = date.getFullYear() - birth.getFullYear();
+  var m = date.getMonth() -birth.getMonth();
+  if(m&lt;0 || (m===0 &amp;&amp; date.getDate()&lt;birth.getDate())){
+  age--;
+  }
+}
+age</t></si><si><t>Function field displays entered text 
+var date = new Date()
+var birth = new Date(source.a)
+if(date &amp;&amp; birth) {
+  var age = date.getFullYear() - birth.getFullYear();
+  var m = date.getMonth() -birth.getMonth();
+  if(m&lt;0 || (m===0 &amp;&amp; date.getDate()&lt;birth.getDate())){
+  age--;
+  }
+}
+age</t></si><si><t xml:space="preserve">Dropdown displays 'target.a' as selected value </t></si><si><t xml:space="preserve">Click 'Add Validation' </t></si><si><t>Function field and target dropdown appear under Validation</t></si><si><t>Enter 
+var today = new Date ();
+var date = new Date (source.a);
+if (date &gt; today)
+'Date cannot be future date'</t></si><si><t>Function field displays entered text
+var today = new Date ();
+var date = new Date (source.a);
+if (date &gt; today)
+'Date cannot be future date'</t></si><si><t>Select 'source.a' from target dropdown</t></si><si><t xml:space="preserve">Dropdown displays 'source.a' as selected value </t></si><si><t>Already created entities</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Start the process at Data Modeler - Validation Tab</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag 'First Name' to Drop here entity</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Entity Validation fields are enable to change</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click the Description input field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Description field is focused.</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Check checkbox for Required</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Checkbox for Required is selected</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click the Message on Error of Required input field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Message on Error field is focused.</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Please enter the first name.' as message on error</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Message on error field displays entered text 'Please enter the first name.' </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Check checkbox for Min Length</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Checkbox for Min Length is selected</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click the Value of Min Length input field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Value field is focused.</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter "2" as value of Min Length</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Value field displays entered text "2"</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click the Message on Error of Min Length input field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter "Minimum length is 2." as Message on Error of Min Length</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Message on error field displays entered text "Minimum length is 2." </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click the Value of Max Length input field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Remove "100" entered</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>"100" is removed</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter "10" as value of Max Length</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Value field displays entered text "10"</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click the Message on Error of Max Length input field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter "Maximum length is 10." as Message on Error of Max Length</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Message on error field displays entered text "Maximum length is 10." </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 2: Age</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag 'Age' to Drop here entity</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Please enter age.' as message on error</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Message on error field displays entered text 'Please enter age.' </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Check checkbox for Min</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Checkbox for Min is selected</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click the Value of Min input field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter "19" as value of Min</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Value field displays entered text "19"</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click the Message on Error of Min input field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter "Minimum age is 19." as Message on Error of Min</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Message on error field displays entered text "Minimum age is 19." </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Check checkbox for Max</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Checkbox for Max is selected</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click the Value of Max input field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter "65" as value of Max</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Value field displays entered text "65"</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click the Message on Error of Max input field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter "Maximum age is 65." as Message on Error of Max</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Message on error field displays entered text "Maximum age is 65." </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 3: Phone</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag 'Phone' to Drop here Entity</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Please enter the phone number.' as message on error</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Message on error field displays entered text 'Please enter the phone number.' </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Check checkbox for Pattern</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Checkbox for Pattern is selected</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Select second radio button at pattern field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Second radio button is selected</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click the Pattern input field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Pattern field is focused.</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter "^[0-9]{3}[-]+[0-9]{4}[-]+[0-9]{4}$" as Pattern</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Pattern field displays entered text 
+"^[0-9]{3}[-]+[0-9]{4}[-]+[0-9]{4}$"</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click the Message on Error of Pattern input field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter "Phone number format." as message on error</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Message on error field displays entered text  "Phone number format."</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 4: Date of Birth</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag 'Date of Birth' to Drop here Entity</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Please select the date of birth.' as message on error</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Message on error field displays entered text 'Please select the date of birth.' </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 5: Email Address</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag 'Email Address' to Drop here Entity</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Please enter the email.' as message on error</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Message on error field displays entered text 'Please enter the email.' </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click Predefined dropdown at pattern field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Dropdown opens</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Select EMAIL</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>EMAIL displays at the dropdown</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter "Email Format" as message on error</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Message on error field displays entered text  "Email Format"</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 6: Gender</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag 'Gender' to Drop here Entity</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Please enter the gender.' as message on error</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Message on error field displays entered text 'Please enter the gender.' </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter "^[A-Z]{1}$" as Pattern</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Pattern field displays entered text "^[A-Z]{1}$"</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Check "i" checkbox for Option</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>"i" checkbox is checked</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Please enter only one character.' as message on error</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Message on error field displays entered text 'Please enter only one character.' </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click the inside function field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Inside function is focused.</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter
+if(value !== "M" &amp;&amp; value !== "W") "Please enter only M or W";
+as Condition at Fucntion field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Condition field displays entered text
+if(value !== "M" &amp;&amp; value !== "W") "Please enter only M or W";</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Save' icon on the top on the top right tool bar</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Confirmation alert appears</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'OK'</t></si><si><t>All Validations are saved</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Publish' button on the top right tool bar</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Published</t></si><si><t>Relationship and validations are made</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Already published data from Data Modeler</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 1: Create Form</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Simple Form' workspace</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Workspace expands</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Form lists are shown on the left pane</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click ''Personal Information' Form</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Form opens at the canvas</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Component' tab at the left side window</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Component groups are listed</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Layouts and Views'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Layouts and Views' expands</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag and drop 'Fieldset' to the canvas</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Fieldset appears</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Name' as Title</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Title field displays entered text 'Name'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'false' at the 'Toggleable' </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Radio button false selected</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click 'Apply' </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Changed attributes are applied to 'Fieldset'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag and drop 'Grid Layout' component inside 'Fieldset'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>2x3 grid layout appears inside 'Name' Fieldset</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Change 'Row' to 1</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Row field displays the text '1'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Set 'Set a Container' as below:
+&lt;1col&gt; 
+xs: 4
+sm:4
+md: 4
+lg: 4
+xl: 4
+
+&lt;2 col&gt;
+xs: 4
+sm:4
+md: 4
+lg: 4
+xl: 4
+
+&lt;3 col&gt;
+xs: 4
+sm:4
+md: 4
+lg: 4
+xl: 4</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>All xs, sm, md, lg, and xl are set to 4</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Apply'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Grid layout changes from 2x3 to 1x3</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Project Schema' tab at the left side window</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Entities are listed</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag and drop 'First Name' entity inside the first column of grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve"> 'First Name' entity appears inside the first column of grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Layout' tab from the right side window</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Layout window appears</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Click the third layout style </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Third layout stlye is selected</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">Layout changes to 'Label/Component/Validation' format                                              </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag and drop 'Middle Name' entity inside the second column of grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve"> 'Middle Name' entity appears inside the second column of grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Recent Layout and Style'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag and drop 'First Name' entity inside the third column of grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve"> 'First Name' entity appears inside the third column of grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Component' from left pane</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag and drop 'Grid Layout' inside 'Fieldset'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve">2x3 grid layout appears under grid layout inside 'Name' Fieldset </t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click 'Attribute' tab at the right side window</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Attribute window appears</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Change 'Col' to 1</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Col field displays the text '1'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Set 'Set a Container' as below:
+&lt;1col&gt; 
+xs: 12
+sm:12
+md: 12
+lg: 12
+xl: 12</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>xs, sm, md, lg, and xl are set to 12</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Grid layout change to 1x1</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Entities and Entity groups are listed</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag and drop 'Full Name' entity inside the  grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve"> 'Full Name' entity appears inside the grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag and drop 'Fieldset' to the canvas (Below 'Name' Fieldset)</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Fieldset appears below 'Name' Fieldset</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Address' as Title</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Title field displays entered text 'Address'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag and drop 'Grid Layout' component inside 'Address' Fieldset</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>2x3 grid layout appears inside 'Address' Fieldset</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Change 'Col' to 4</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Col field displays the text '4'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Set 'Set a Container' as below:
+&lt;1col&gt; 
+xs: 3
+sm:3
+md: 3
+lg: 3
+xl: 3
+
+&lt;2 col&gt;
+xs: 3
+sm: 3
+md: 3
+lg: 3
+xl: 3
+
+&lt;3 col&gt;
+xs: 3
+sm: 3
+md: 3
+lg: 3
+xl: 3
+
+&lt;4 col&gt;
+xs: 3
+sm: 3
+md: 3
+lg: 3
+xl: 3</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>All xs, sm, md, lg, and xl are set to 3</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Grid layout change to 1x4</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag and drop 'State' entity inside the first column of grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve"> 'State' entity appears inside the first column of grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag and drop 'City' entity inside the second column of grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve"> 'City' entity appears inside the second column of grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag and drop 'Zip Code' entity inside the third column of grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve"> 'Zip Code' entity appears inside the third column of grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag and drop 'Address' entity inside the fourth column of grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve"> 'Address' entity appears inside the fourth column of grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag and drop 'Fieldset' to the canvas (Below 'Address' Fieldset)</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Fieldset appears below 'Address' Fieldset</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Enter 'Other Information' as Title</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Title field displays entered text 'Other Information'</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag and drop 'Grid Layout' component inside 'Other Information' Fieldset</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>2x3 grid layout appears inside 'Other Information' Fieldset</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Set 'Set a Container' as below:
+&lt;1col&gt; 
+xs: 4
+sm: 4
+md: 4
+lg: 4
+xl: 4
+
+&lt;2 col&gt;
+xs: 4
+sm: 4
+md: 4
+lg: 4
+xl: 4
+
+&lt;3 col&gt;
+xs: 4
+sm: 4
+md: 4
+lg: 4
+xl: 4</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Drag and drop 'Phone' entity inside the first column of grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t xml:space="preserve"> 'Phone' entity appears inside the first column of grid layout</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case1: Creating a Block</t></si><si><t>Click 'Project Manager' button from the top menu bar.</t></si><si><t>'Project Manager' modal is opened.</t></si><si><t>Click 'Simple Form' workspace.</t></si><si><t>'Simple Form' workspace is selected.
+Tree is opened and 'Simple Form' project is shown.</t></si><si><t>Click 'Simple Form' project.</t></si><si><t>'Simple Form' project is selected.
+Tree is opened and 'Form' and 'Block' items are shown.</t></si><si><t>Click 'New Block' button.</t></si><si><t>'New Block' modal is shown.
+There are two input boxes.
+- 'Name' input box
+- 'Description' input box</t></si><si><t>Enter 'Extend CSS and JS Block' into 'Name' input box.</t></si><si><t>Given values are entered into input box.</t></si><si><t>Enter 'Extend CSS and JS Block' into 'Description' input box.</t></si><si><t>Click 'Save' button at the bottom of the modal.</t></si><si><t>An alert shown up with a message as below.
+
+Do you want to create this block?</t></si><si><t>Click 'OK' button.</t></si><si><t>New block is created.
+Under the block tree, there is a block named as 'Extend CSS and JS Block'.</t></si><si><t>Click 'Close' button.</t></si><si><t>Modal is closed.</t></si><si><t>Simple Form - Relationship test in the Form</t></si><si><t>Already created form</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Case 1: Full name calculation</t></si><si><t>Click Desktop Preview mode icon top of right the Appdev studio</t></si><si><t>Privew Window open</t></si><si><t>Enter 'McCartney' to First Name Field</t></si><si><t>Enterd 'McCartney' to First Name Field</t></si><si><t>Enter 'Paul' to Middle Name Field</t></si><si><t>Enterd 'Paul' to Middle Name Field</t></si><si><t>Enter 'James' to Last Name Field</t></si><si><t>Enterd 'James' to Last Name Field</t></si><si><t>Check Full Name Field Value</t></si><si><t>Full Name Field value is 'James, Paul MaCartney'</t></si><si><t>Erase 'Paul' in the Middle Name Field and Check again Full Name Field Value</t></si><si><t>Full Name Field value cahnged to 'James, MaCartney'</t></si><si><t>Case 2: Address calculation</t></si><si><t>Click Drop Down box at State Field</t></si><si><t>DropDown expanded and state list appear</t></si><si><t>Select ARIZONA</t></si><si><t>ARIZONA selected</t></si><si><t>Click Drop Down box at City Field</t></si><si><t>DropDown expanded and City list appear</t></si><si><t>Enter 'Pho' to Search Field at Drop Down box</t></si><si><t>Phoenix appear in the dropdown box</t></si><si><t>Select Phoenix</t></si><si><t>Phoenix selected</t></si><si><t>Enter '85255' to Zip Code Field</t></si><si><t>85255 entered to Zip Code Field</t></si><si><t>Check Address Field Value</t></si><si><t>Address Field value is 'AZ, Phoenix, 85255'</t></si><si><t>Erase 'Pho' at Search Field and Select  Pearce</t></si><si><t>Pearce Selected at City field</t></si><si><t>Erase '85255' and Enter '85118' to Zip Code Field</t></si><si><t>Entered '85118' to Zip Code Field</t></si><si><t>Address Field value is 'AZ, Pearce, 85118'</t></si><si><t>Case 3: Age calculation and validation</t></si><si><t>Click calendar icon at Date of birth field
+in other information Field set</t></si><si><t>Calendar opens</t></si><si><t xml:space="preserve">Select January, 1, 1990 </t></si><si><t>01/01/1990 selected at Date of Birth Field</t></si><si><t>Check Age Field value</t></si><si><t>Age value is 31</t></si><si><t>Select December, 31, 1990</t></si><si><t>12/31/1990 selected at Date of Birth Field</t></si><si><t>Age value is 30</t></si><si><t>Select January, 1, 2022</t></si><si><t>01/01/2022 selected at Date of Birth Field</t></si><si><t>Check Validation message
+at bottom of Date of Birth</t></si><si><t>Date cannot be future date' displayed
+at bottom of Date of Birth Field</t></si><si><t>Click calendar icon at Date of birth field and 
+Select January, 1, 2001</t></si><si><t>01/01/2001 selected at Date of Birth Field</t></si><si><t>Validation message disappear at bottom of 
+Date of Birth Field</t></si><si><t>Case 1: Required Test</t></si><si><t>Click 'Preview Desktop' icon on the top right tool bar</t></si><si><t>Preview opens</t></si><si><t>　</t></si><si><t>Click the First Name input field</t></si><si><t>First Name field is focused.</t></si><si><t>Enter "John" at First Name field</t></si><si><t>First Name field displays entered text "John"</t></si><si><t>Remove "John" entered</t></si><si><t>Entered text "John" is removed.
+"Please enter the first name." displays at the bottom of First Name input field</t></si><si><t>Click calendar icon at the Date of Birth icon</t></si><si><t>Select 01/01/2000</t></si><si><t>Date of Birth field displays selected date "01/01/2000"</t></si><si><t>Click clear button</t></si><si><t>Selected date "01/01/2000" is removed.
+"Please select the date of birth." displays at the bottom of Date of Birth input field</t></si><si><t>Click "Save with Validation" button</t></si><si><t>Validation modal opens.
+First Name, Phone, Email Address, Gender, Date of Birth, Age validation display</t></si><si><t>Click "Close" button at validation modal</t></si><si><t>Modal closes.
+"Please enter ~" or "Please select ~" message displays at the bottom of First Name, Phone, Email Address, Gender, Date of Birth, Age field</t></si><si><t>Case 2: Min, Max Length Test</t></si><si><t>Enter "J" at First Name field</t></si><si><t>First Name field displays entered text "J".
+"Minimum length is 2. (1 / 2)" displays at the bottom of First Name input field</t></si><si><t>Remove "J" at First Name field</t></si><si><t>"J" is removed.
+"Please enter the first name." displays at the bottom of First Name input field</t></si><si><t>Enter "Jo" at First Name field</t></si><si><t>First Name field displays entered text "Jo".
+Validation message disappears</t></si><si><t>Remove "Jo" at First Name field</t></si><si><t>"Jo" is removed.
+"Please enter the first name." displays at the bottom of First Name input field</t></si><si><t>Enter "JohnJohnJohn" at First Name field</t></si><si><t>First Name field displays entered text "JohnJohnJohn"
+"Maximum length is 10. (12 / 10)" displays at the bottom of First Name input field</t></si><si><t>Remove "JohnJohnJohn" at First Name field</t></si><si><t>"JohnJohnJohn" is removed.
+"Please enter the first name." displays at the bottom of First Name input field</t></si><si><t>First Name field displays entered text "John".
+Validation message disappears</t></si><si><t>Case 3: Min, Max Test</t></si><si><t>Select 01/01/2015</t></si><si><t>Date of Birth field displays selected date "01/01/2015" and Age field displays "6".
+"Minimum age is 19." displays at the bottom of Age input field</t></si><si><t>Select 01/01/1950</t></si><si><t>Date of Birth field displays selected date "01/01/1950" and Age field displays "71".
+"Maximum age is 65." displays at the bottom of Age input field</t></si><si><t>Date of Birth field displays selected date "01/01/2000" and Age field displays "21".
+Validation message disappears</t></si><si><t>Case 4: Predefined Pattern Test</t></si><si><t>Click the Email Address input field</t></si><si><t>Email Address field is focused.</t></si><si><t>Enter "john" at Email Address field</t></si><si><t>Remove "John" at Email Address field</t></si><si><t>"John" is removed.
+"Please enter the email." displays at the bottom of Email Address input field</t></si><si><t>Enter "john@bizflow" at Email Address field</t></si><si><t>Email Address field displays entered text "john@bizflow".
+"Email Format" displays at the bottom of Email Address input field</t></si><si><t>Remove "john@bizflow" at Email Address field</t></si><si><t>"john@bizflow" is removed.
+"Please enter the email." displays at the bottom of Email Address input field</t></si><si><t>Enter "john@bizflow.com" at Email Address field</t></si><si><t>Email Address field displays entered text "john@bizflow.com".
+Validation message disappears</t></si><si><t>Case 5: Custom Pattern - Pattern Test</t></si><si><t>Click the Phone input field</t></si><si><t>Phone field is focused.</t></si><si><t>Enter "010" at Phone field</t></si><si><t>Phone field displays entered text "010".
+"Phone number Format" displays at the bottom of Phone input field</t></si><si><t>Remove "010" at Phone field</t></si><si><t>"010" is removed.
+"Please enter the phone number." displays at the bottom of Phone input field</t></si><si><t>Enter "010-0000" at Phone field</t></si><si><t>Remove "010-0000" at Phone field</t></si><si><t>"010-0000" is removed.
+"Please enter the phone number." displays at the bottom of Phone input field</t></si><si><t>Enter "010-0000-0000" at Phone field</t></si><si><t>Phone field displays entered text "010-0000-0000".
+Validation message disappears</t></si><si><t>Case 6: Custom Pattern - Option Test</t></si><si><t>Gender field is focused.</t></si><si><t>Enter "MM" at Gender field</t></si><si><t>Gender field displays entered text "MM".
+"Please enter only one character." displays at the bottom of Gender input field</t></si><si><t>Remove "MM" at Gender field</t></si><si><t>"MM" is removed.
+"Please enter the gender." displays at the bottom of Gender input field</t></si><si><t>Enter "1" at Gender field</t></si><si><t>Remove "1" at Gender field</t></si><si><t>"1" is removed.
+"Please enter the gender." displays at the bottom of Gender input field</t></si><si><t>Enter "Q" at Gender field</t></si><si><t>Gender field displays entered text "Q".
+"Please enter only M or W" displays at the bottom of Gender input field</t></si><si><t>Remove "Q" at Gender field</t></si><si><t>"Q" is removed.
+"Please enter the gender." displays at the bottom of Gender input field</t></si><si><t>Enter "q" at Gender field</t></si><si><t>Remove "q" at Gender field</t></si><si><t>"q" is removed.
+"Please enter the gender." displays at the bottom of Gender input field</t></si><si><t>Case 7: Function Test</t></si><si><t>Enter "A" at Gender field</t></si><si><t>Gender field displays entered text "A".
+"Please enter only M or W" displays at the bottom of Gender input field</t></si><si><t>Remove "A" at Gender field</t></si><si><t>"A" is removed.
+"Please enter the gender." displays at the bottom of Gender input field</t></si><si><t>Enter "M" at Gender field</t></si><si><t>Gender field displays entered text "M".
+No validation appears.</t></si><si><t>Remove "M" at Gender field</t></si><si><t>"M" is removed.
+"Please enter the gender." displays at the bottom of Gender input field</t></si><si><t>Enter "W" at Gender field</t></si><si><t>Gender field displays entered text "W".
+No validation appears.</t></si><si><t>Popup appears and says "Saved Successfully"</t></si><si><t>Case1: Form Level Extend CSS</t></si><si><t>'Simple Form' project is opened.
+List of forms are shown.</t></si><si><t>Select 'Personal Information' form.</t></si><si><t>'Personal Information' form is opened in the canvas.</t></si><si><t>Click 'Extend CSS and JavaScript' button from the top menu bar.</t></si><si><t>'Extend CSS and JavaScript' modal is opened.
+
+There are two empty textareas.
+- 'Extend CSS' textarea
+- 'Extend JavaScript' textarea</t></si><si><t>Enter below values into the 'Extend CSS' textarea.
+
+.bf-label {
+    font-weight: bold;
+}
+
+.p-fieldset-legend-text {
+    font-weight: bold;
+    font-size: 15px;
+}</t></si><si><t>Given values are entered into textarea.</t></si><si><t>Click 'Apply' button.</t></si><si><t>'Extend CSS and JavaScript' modal is closed.</t></si><si><t>Click 'Save' button from the top menu bar.</t></si><si><t>Change is saved.</t></si><si><t>Click 'Preview Desktop' button from the top menu bar.</t></si><si><t>'Preview Desktop' window is opened.</t></si><si><t>In 'Preview Desktop' window, check if all labels are in bold.
+
+Labels with '.bf-label' : 
+- 'First Name', 'Middle Name', 'Last Name', 'Full Name', 'State', 'City', 'Zip Code', 'Address', 'Phone', 'Email Address', 'Gender', 'Date of Birth', 'Age'
+
+Labels with '.p-fieldset-legent-text' : 
+- 'Name', 'Address', 'Other Information'</t></si><si><t>Listed labels are in bold.</t></si><si><t>Close 'Preview Desktop' window.</t></si><si><t>'Preview Desktop' window is closed.</t></si><si><t>In AppDev Studio, click 'Extend CSS and JavaScript' button from the top menu bar.</t></si><si><t>'Extend CSS and JavaScript' modal is opened.</t></si><si><t>Modify values in 'Extend CSS' textarea as below.
+
+.bf-label {
+    font-weight: bold;
+}</t></si><si><t>Textarea values are changed as given.</t></si><si><t>In 'Preview Desktop' window, check if only labels with '.bf-label' are in bold.
+
+Labels with '.bf-label' :
+- 'First Name', 'Middle Name', 'Last Name', 'Full Name', 'State', 'City', 'Zip Code', 'Address', 'Phone', 'Email Address', 'Gender', 'Date of Birth', 'Age'</t></si><si><t>From AppDev Studio, click 'Extend CSS and JavaScript' button from the top menu bar.</t></si><si><t>Delete all values from 'Extend CSS' textarea.</t></si><si><t>All values are deleted, and it is empty.</t></si><si><t>In 'Preview Desktop' window, check if all labels are not in bold.</t></si><si><t>All labels are not in bold.</t></si><si><t>Case2: Block Level Extend CSS</t></si><si><t>In 'Personal Information' form from AppDev Studio, search for a component labeled as 'Embedded Block - Extend CSS and JS Block'.</t></si><si><t>The component labeled as 'Embedded Block - Extend CSS and JS Block' can be found in the bottom of the form canvas.</t></si><si><t>Click 'Go to Block' button from 'Embedded Block - Extend CSS and JS Block' component.</t></si><si><t>New block tab 'Extened CSS and JS Block' is appeared at the top of the canvas, and this block is opened.</t></si><si><t>Click 'Personal Information' form tab at the top of the canvas.</t></si><si><t>'Personal Information' form canvas is opened.</t></si><si><t>In AppDev Studio, click 'Extened CSS and JS Block' block tab at the top of the canvas.</t></si><si><t>'Extened CSS and JS Block' block canvas is opened.</t></si><si><t>Case3: Setting Extend JavaScript</t></si><si><t>In AppDev Studio, open 'Personal Information' form.</t></si><si><t>Enter below values into 'Extend JavaScript' textarea.
+
+function _testJS(location) {
+    console.log("Extend JavaScript Function called from : " + location);
+}
+
+$B.extend("testJS", _testJS);</t></si><si><t>Case4: Calling Extend JavaScript function - from 'Button' component's Event Handler function</t></si><si><t>Select 'Button Component' button in the form.</t></si><si><t>'Attribute' tab for 'Button' component is opened.</t></si><si><t>Click 'Event' tab for 'Button' component.</t></si><si><t>'Event' tab is opened.
+
+There are two textareas.
+- 'state' textarea
+- 'function' textarea</t></si><si><t>Enter below values into 'function' textarea.
+
+var location = "Button - Click Event Handler";
+$B.custom.testJS(location);</t></si><si><t>Change is applied.</t></si><si><t>Open 'Developer tools' from the 'Preview Desktop' window.</t></si><si><t>'Developer tools' window is opened.</t></si><si><t>In 'Preview Desktop' window, click 'Button Component' button.</t></si><si><t>'Button Component' button is clicked.</t></si><si><t>Check 'Developer tools' window.</t></si><si><t>There is a console log message as below.
+
+Extend JavaScript Function called from : Button - Click Event Handler</t></si><si><t>'Event' tab is opened.</t></si><si><t>Delete all values from 'function' textarea.</t></si><si><t>All values are deleted from 'function' textarea.</t></si><si><t>Case5: Calling Extend JavaScript function - from 'Form Callback' - 'Before Data'</t></si><si><t>Click 'Form Callback' button from the top menu bar.</t></si><si><t>'Form Callback' modal is opened.
+
+'Before Data' tab is selected.
+There are two textareas.
+- 'Callback Function' textarea
+- 'Description' textarea</t></si><si><t>Enter below values into 'Callback Function' textarea.
+
+var location = "Before Data Callback";
+$B.custom.testJS(location);
+
+resume();</t></si><si><t>Enter below values into 'Description' textarea.
+
+Description</t></si><si><t>Click 'Save' button.</t></si><si><t>Change is saved.
+It shows a notification with a toast with a message below.
+
+Successfully saved.
+
+'+' is added to the 'Before Data' tab label.</t></si><si><t>'Form Callback' modal is closed.</t></si><si><t>Check console tab if there is a console message.</t></si><si><t>There is a console message as below.
+
+Extend JavaScript Function called from : Before Data Callback</t></si><si><t>'Form Callback' modal is opened.
+
+'Before Data' tab is selected.</t></si><si><t>Modify values from 'Callback Function' textarea as below.
+
+resume();</t></si><si><t>The values in 'Callback Function' textarea is modified.</t></si><si><t>Change is saved.
+It shows a notification with a toast with a message below.
+
+Successfully saved.</t></si><si><t>Case6: Calling Extend JavaScript function - from 'Form Callback' - 'After Data'</t></si><si><t>Select 'After Data' tab from the tab list in 'Form Callback' modal.</t></si><si><t>'After Data' tab is opened.</t></si><si><t>Select 'First Name' entity from 'Form Schema' list at the left side of the modal.</t></si><si><t>'First Name' is selected.</t></si><si><t>Drag 'First Name' entity and drop onto the box with a message, 'Drag here to add (Data)'.</t></si><si><t>Dropped entity is shown below the 'Drag here …' box.
+
+First Name            data.a  ( i icon) (trashcan icon)
+
+* 'data.a' can be different in your environment.
+i.e) data.b, data.c, data.d, etc.</t></si><si><t>Enter below values into 'Callback Function' textarea.
+
+var location = "After Data Callback - data.a = " + data.a;
+$B.custom.testJS(location);
+
+resume();</t></si><si><t>Given values are entered into textarea.
+
+* In case the alias for data entity, data.a, is different in your environment, enter the alias name shown in your environment.
+i.e) data.b, data.c, data.d, etc.</t></si><si><t>Change is saved.
+It shows a notification with a toast with a message below.
+
+Successfully saved.
+
+'+' is added to the 'After Data' tab label.</t></si><si><t>There is a console message as below.
+
+Extend JavaScript Function called from : After Data Callback - data.a = undefined</t></si><si><t>'Form Callback' modal is opened.</t></si><si><t>Case7: Calling Extend JavaScript function - from 'Form Callback' - 'Before Save'</t></si><si><t>Select 'Before Save' tab from the tab list in 'Form Callback' modal.</t></si><si><t>'Before Save' tab is opened.</t></si><si><t>Enter below values into 'Callback Function' textarea.
+
+var location = "Before Save Callback - data.a = " + data.a;
+$B.custom.testJS(location);
+
+resume();</t></si><si><t>Change is saved.
+It shows a notification with a toast with a message below.
+
+Successfully saved.
+
+'+' is added to the 'Before Save' tab label.</t></si><si><t>In 'Preview Desktop' window, click 'Save without Validation' button.</t></si><si><t>'Save without Validation' button is clicked.
+It shows a notification with a toast with a message below.
+
+Saved successfully.</t></si><si><t>There is a console message as below.
+
+Extend JavaScript Function called from : Before Save Callback - data.a = undefined</t></si><si><t>In 'Preview Desktop' window, enter 'Kim' into 'First Name' input text box.</t></si><si><t>'Kim' is entered.</t></si><si><t>Check console tab if there is a new console message.</t></si><si><t>There is a console message as below.
+
+Extend JavaScript Function called from : Before Save Callback - data.a = Kim</t></si><si><t>Case8: Calling Extend JavaScript function - from 'Form Callback' - 'After Save'</t></si><si><t>Select 'After Save' tab from the tab list in 'Form Callback' modal.</t></si><si><t>'After Save' tab is opened.</t></si><si><t>Enter below values into 'Callback Function' textarea.
+
+var location = "After Save Callback - data.a = " + data.a;
+$B.custom.testJS(location);
+
+resume();</t></si><si><t>Change is saved.
+It shows a notification with a toast with a message below.
+
+Successfully saved.
+
+'+' is added to the 'After Save' tab label.</t></si><si><t>There is a console message as below.
+
+Extend JavaScript Function called from : After Save Callback - data.a = undefined</t></si><si><t>There is a console message as below.
+
+Extend JavaScript Function called from : After Save Callback - data.a = Kim</t></si><si><t>Case9: Calling Extend JavaScript function - from 'Form Callback' - 'Before Exit'</t></si><si><t>Select 'Before Exit' tab from the tab list in 'Form Callback' modal.</t></si><si><t>'Before Exit' tab is opened.</t></si><si><t>Enter below values into 'Callback Function' textarea.
+
+var location = "Before Exit Callback - data.a = " + data.a;
+$B.custom.testJS(location);
+
+resume();</t></si><si><t>Change is saved.
+It shows a notification with a toast with a message below.
+
+Successfully saved.
+
+'+' is added to the 'Before Exit' tab label.</t></si><si><t>In 'Preview Desktop' window, click 'Exit' button.</t></si><si><t>'Exit' button is clicked.</t></si><si><t>There is a console message as below.
+
+Extend JavaScript Function called from : Before Exit Callback - data.a = undefined</t></si><si><t>There is a console message as below.
+
+Extend JavaScript Function called from : Before Exit Callback - data.a = Kim</t></si><si><t>Case10: Calling Extend JavaScript function - from 'Form Callback' - 'After Exit'</t></si><si><t>Select 'After Exit' tab from the tab list in 'Form Callback' modal.</t></si><si><t>'After Exit' tab is opened.</t></si><si><t>Enter below values into 'Callback Function' textarea.
+
+var location = "After Exit Callback - data.a = " + data.a;
+$B.custom.testJS(location);
+
+resume();</t></si><si><t>Change is saved.
+It shows a notification with a toast with a message below.
+
+Successfully saved.
+
+'+' is added to the 'After Exit' tab label.</t></si><si><t>There is a console message as below.
+
+Extend JavaScript Function called from : After Exit Callback - data.a = undefined</t></si><si><t>Case11: Calling Extend JavaScript function - from 'Form Callback' - 'Data Change Listener'</t></si><si><t>Select 'Data Change Listener' tab from the tab list in 'Form Callback' modal.</t></si><si><t>'Data Change Listener' tab is opened.</t></si><si><t>Click 'New Callback' button.</t></si><si><t>'New Callback' button is changed to 'Add Callback' button.
+
+'Drag here to add (Data)' box and 'Drag here to add (Observable)' box are enabled.</t></si><si><t>Dropped entity is shown below the 'Drag here …(Data)' box.
+
+First Name            data.a  ( i icon) (trashcan icon)
+
+* 'data.a' can be different in your environment.
+i.e) data.b, data.c, data.d, etc.</t></si><si><t>Drag 'First Name' entity and drop onto the box with a message, 'Drag here to add (Observable)'.</t></si><si><t>Dropped entity is shown below the 'Drag here …(Observable)' box.
+
+First Name            (trashcan icon)</t></si><si><t>Enter below values into 'Callback Function' textarea.
+
+var location = "Data Change Listener Callback - data.a = " + data.a;
+$B.custom.testJS(location);
+
+resume();</t></si><si><t>Click 'Add Callback' button.</t></si><si><t>'Add Callback' button is clicked.
+
+New callback function item is added to the 'Callback Function List' area.</t></si><si><t>Change is saved.
+It shows a notification with a toast with a message below.
+
+Successfully saved.
+
+'+' is added to the 'Data Change Listener' tab label.</t></si><si><t>In 'Preview Desktop' window, enter 'Kim' into 'First Name' input text box.
+
+Check 'Developer tools' console area for the console message, as you type 'Kim' into input text box.</t></si><si><t>As you type each letter of 'Kim' into input text box, console message is shown.
+
+Extend JavaScript Function called from : Data Change Listener Callback - data.a = k
+Extend JavaScript Function called from : Data Change Listener Callback - data.a = ki
+Extend JavaScript Function called from : Data Change Listener Callback - data.a = kim</t></si><si><t>Click 'Modify' icon button under 'Callback Function List' area.</t></si><si><t>Selected 'Callback Function' is opened.
+'Modify Callback' button is shown.</t></si><si><t>Click 'Modify Callback' button.</t></si><si><t>'Modify Callback' button is changed to 'Add Callback' button.
+
+Modification is applied to the 'Callback Function List' area.</t></si><si><t>Case12: Calling Extend JavaScript function - from 'Form Callback' - 'State Change Listener'</t></si><si><t>Click '+1' button at the end of tab list.</t></si><si><t>Hidden 'State Change Listener' tab is shown under the '+1' button.</t></si><si><t>Select 'State Change Listener' tab from the tab list in 'Form Callback' modal.</t></si><si><t>'State Change Listener' tab is opened.</t></si><si><t>Look for 'formAction' state from 'State &amp; rState' list on the left side of the modal.</t></si><si><t>'formAction' state is listed under 'state'.
+
+state: {
+  …
+  …
+  formAction: a reserved state variable for form actions
+  …
+  …
+},
+…</t></si><si><t>Drag 'formAction' state and drop onto the box with a message, 'Drag here to add (Observable)'.</t></si><si><t>Dropped entity is shown below the 'Drag here …(Data)' box.
+
+formAction            (trashcan icon)</t></si><si><t>Enter below values into 'Callback Function' textarea.
+
+var location = "State Change Listener Callback - state.formAction = " + state.formAction;
+$B.custom.testJS(location);
+
+resume();</t></si><si><t>Change is saved.
+It shows a notification with a toast with a message below.
+
+Successfully saved.
+
+'+' is added to the 'State Change Listener' tab label.</t></si><si><t>In the 'Personal Information' form canvas, select 'Button Component' button.</t></si><si><t>Click 'Event' tab.</t></si><si><t>Enter below values into 'state' textarea.
+
+{ "formAction": "BUTTON" }</t></si><si><t>Changed is saved.</t></si><si><t>In 'Developer tools' window, check console tab if there is a new console message.</t></si><si><t>A console message is shown as below.
+
+Extend JavaScript Function called from : State Change Listener Callback - state.formAction = BUTTON</t></si><si><t>'Save without Validation' button is clicked.</t></si><si><t>A console message is shown as below.
+
+Extend JavaScript Function called from : State Change Listener Callback - state.formAction = SAVE</t></si><si><t>A console message is shown as below.
+
+Extend JavaScript Function called from : State Change Listener Callback - state.formAction = EXIT</t></si><si><t>Remove "This fields can be entered maximum of 100 character(s)." entered</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>"This fields can be entered maximum of 100 character(s)." is removed</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click calendar icon at the Date of Birth icon</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Email Address field displays entered text "john".
+"Email Format" displays at the bottom of Email Address input field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Phone field displays entered text "010-0000".
+"Phone number Format" displays at the bottom of Phone input field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Click the Gender input field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Gender field displays entered text "1".
+"Please enter only one character." displays at the bottom of Gender input field</t><phoneticPr fontId="2" type="noConversion"/></si><si><t>Gender field displays entered text "q".
+"Please enter only M or W" displays at the bottom of Gender input field</t><phoneticPr fontId="2" type="noConversion"/></si></sst>

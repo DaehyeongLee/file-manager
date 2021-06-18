@@ -13,16 +13,20 @@
     color: #fff;
     cursor: pointer; }
 
-.style__FileUpload__1wlpfM {
-  width: 80%; }
-
-.style__leftSide__2CGnH2 {
-  width: 18.75rem;
-  padding: 10px 20px;
-  float: left; }
-
-.style__rightSide__1wNX28 {
-  width: 30rem;
-  padding: 10px 20px;
-  float: right; }
+.style__FileUploadPage__20vFXR {
+  width: 80%;
+  padding: 20px; }
+  .style__FileUploadPage__leftSide__7j-axu {
+    width: 13rem;
+    padding: 10px 20px;
+    float: left; }
+    .style__FileUploadPage__leftSide__li_file__1f4-hT {
+      color: #1a73e8;
+      cursor: pointer; }
+  .style__FileUploadPage__rightSide__3auc9G {
+    width: 30rem;
+    padding: 10px 20px;
+    float: right; }
+    .style__FileUploadPage__rightSide__textarea__2xNSJr {
+      height: 13rem !important; }
 

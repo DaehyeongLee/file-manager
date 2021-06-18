@@ -4,6 +4,9 @@ const fs = require('fs');
 //const unzipper = require('unzipper');
 const unzip = require('unzip');
 
+const unzippedPath = 'uploads/unzipped/'; //압축 해제된 폴더 경로
+
+//업로드시 저장될 경로, 파일 이름 지정하는 multer storage
 const storage = multer.diskStorage({
 	destination: function (req, file, cb) {
 		cb(null, 'uploads/');
@@ -12,21 +15,9 @@ const storage = multer.diskStorage({
 		cb(null, `${file.originalname}`);
 	}
 });
+const upload = multer({ storage: storage }).single('file'); //업로드시 사용되는 multer
 
-/* const fileFilter = (req, file, cb) => {
-	
-	let typeArray = file.mimetype.split('/');
-	let fileType = 	typeArray[1]
-	
-    // mime type 체크하여 이미지만 필터링
-    if (fileType == 'zip' || fileType == 'tar') {
-        cb(null, true);
-    } else {
-        cb(null, false);
-    }
-} */
-const upload = multer({ storage: storage }).single('file');
-
+//파일 업로드 Router
 router.post('/file', (req, res) => {
 	
   upload(req, res, (err) => {
@@ -36,17 +27,18 @@ router.post('/file', (req, res) => {
 	  // filePath:res.req.file.path 어디에 파일이 저장되있는지 path(위치)를 가져올수있다.
 	  // fileName: 저장된 파일의 이름을 가져올 수 있다.
 	  return res.json({
-      success: true,
-      filePath: res.req.file.path,
-      fileName: res.req.file.filename
-    });
+		  success: true,
+		  filePath: res.req.file ? res.req.file.path : "", //파일 업로드 취소시 empty string을 response로 보낸다
+		  fileName: res.req.file ? res.req.file.filename : "" //파일 업로드 취소시 empty string을 response로 보낸다
+	  });
   });
 });
 
+//업로드된 파일 압축 해제 Router
 router.post('/unzip', (req, res) => {
 	
 	//Zip 압축해제 후 지정 경로에 저장
-	fs.createReadStream(req.body.filePath).pipe(unzip.Extract({ path: 'uploads/unzipped' }))
+	fs.createReadStream(req.body.filePath).pipe(unzip.Extract({ path: unzippedPath }))
 
 	//Zip 내부 각 파일 Parse
 	var fileInfo = [] //client로 보내게 될 파일 정보
@@ -69,7 +61,32 @@ router.post('/unzip', (req, res) => {
 			});
 		}
 	})
+})
+
+//선택된 파일 content 읽는 Router
+router.post('/detail', (req, res) => {
+	const clickedItem = req.body.clickedItem;
 	
+	fs.readFile(`${unzippedPath}${clickedItem}`, 'utf-8', (err, data) => {
+		if (err) throw err;
+		return res.json({
+				success: true,
+				content: data
+			});
+	});
+})
+
+//선택된 파일 content 수정사항 반영해 저장하는 Router
+router.post('/saveDetail', (req, res) => {
+	const clickedItem = req.body.clickedItem;
+	const clickedItemContent = req.body.clickedItemContent;
+	
+	fs.writeFile(`${unzippedPath}${clickedItem}`, clickedItemContent, 'utf-8', (err) => {
+		if (err) throw err;
+		return res.json({
+				success: true
+			});
+	});
 })
 
 module.exports = router;
