@@ -11,13 +11,13 @@ class FileUpload extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { 
-			file : {},
-			filePath: "",
-			fileName: "",
-			fileList: [],
-			toggleTextArea: false,
-			clickedItem: "",
-			clickedItemContent: ""
+			file : {}, //zip or tar 파일의 전체 정보
+			filePath: "", //zip or tar 파일 경로
+			fileName: "", //zip or tar 파일의 이름
+			fileList: [], //압축 해제된 파일의 List
+			toggleTextArea: false, //Textarea visible toggle
+			clickedItem: "", //파일 List중 클릭된 파일의 Path
+			clickedItemContent: "" //파일 List중 클릭된 파일의 content
 		}
 		
 		this.onFormSubmit = this.onFormSubmit.bind(this)
@@ -63,6 +63,7 @@ class FileUpload extends React.Component {
 		axios.post('/api/files/file', formData, config).then((response) => {
 			if (response.data.success) {
 					
+				//업로드된 zip or tar 파일에 대한 정보 state에 저장
 				this.setState({
 					file : uploadedFile,
 					filePath : response.data.filePath,
@@ -167,7 +168,6 @@ class FileUpload extends React.Component {
 								<Input 
 									className={style.FileUploadPage__rightSide__textarea} 
 									type="textarea" 
-									name="text" 
 									id="textarea" 
 									value={this.state.clickedItemContent}
 									onChange={this.onChangeTestarea}

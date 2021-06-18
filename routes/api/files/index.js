@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const multer = require('multer');
 const fs = require('fs');
+const tar = require('tar');
 //const unzipper = require('unzipper');
 const unzip = require('unzip');
 
@@ -37,30 +38,66 @@ router.post('/file', (req, res) => {
 //업로드된 파일 압축 해제 Router
 router.post('/unzip', (req, res) => {
 	
-	//Zip 압축해제 후 지정 경로에 저장
-	fs.createReadStream(req.body.filePath).pipe(unzip.Extract({ path: unzippedPath }))
+	const fileExtension = req.body.filePath.slice(-3);
+	let fileInfo = [] //client로 보내게 될 파일 정보
+	
+	//파일이 zip일 경우
+	//압축해제후 디렉토리명: unzipped
+	if (fileExtension == 'zip') {
+		//Zip 압축해제 후 지정 경로에 저장
+		fs.createReadStream(req.body.filePath).pipe(unzip.Extract({ path: unzippedPath }))
 
-	//Zip 내부 각 파일 Parse
-	var fileInfo = [] //client로 보내게 될 파일 정보
-	fs.createReadStream(req.body.filePath)
-		.pipe(unzip.Parse())
+		//Zip 내부 각 파일 Parse		
+		fs.createReadStream(req.body.filePath)
+			.pipe(unzip.Parse())
+			.on('entry', function (entry) {
+			var fileName = entry.path;
+			var type = entry.type; // 'Directory' or 'File'
+		
+			fileInfo.push({name: fileName, fileType: type})
+			
+		})
+		//Zip 내부 파일 Parse 종료 후
+		.on('close', function() {
+			if (fileInfo.length == 0) {
+				return res.json({ success: false, err: "압축된 파일의 리스트업에 실패했습니다." });
+			} else {
+				return res.json({
+					success: true,
+					fileInfo
+				});
+			}
+		})
+	} 
+	//파일이 tar일 경우
+	//압축해제후 디렉토리명: tar파일 이름과 동일
+	else {
+		//tar 압축해제 후 지정 경로에 저장
+		fs.createReadStream(req.body.filePath).pipe(
+			tar.x({
+				cwd: unzippedPath
+			})
+		)
+		//tar 내부 각 파일 Parse
 		.on('entry', function (entry) {
 			var fileName = entry.path;
 			var type = entry.type; // 'Directory' or 'File'
 		
 			fileInfo.push({name: fileName, fileType: type})
-		
 		})
+		//tar 내부 파일 Parse 종료 후
 		.on('close', function() {
-		if (fileInfo.length == 0) {
-			return res.json({ success: false, err: "파일정보를 불러오는 것에 실패했습니다." });
-		} else {
-			return res.json({
-				success: true,
-				fileInfo
-			});
-		}
-	})
+			if (fileInfo.length == 0) {
+				return res.json({ success: false, err: "압축된 파일의 리스트업에 실패했습니다." });
+			} else {
+				return res.json({
+					success: true,
+					fileInfo
+				});
+			}
+		})
+	}
+	
 })
 
 //선택된 파일 content 읽는 Router
