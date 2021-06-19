@@ -5,7 +5,8 @@ const tar = require('tar');
 //const unzipper = require('unzipper');
 const unzip = require('unzip');
 
-const unzippedPath = 'uploads/unzipped/'; //압축 해제된 폴더 경로
+const uploadedPath = 'uploads' //업로드되는 폴더 경로
+const unzippedPath = 'uploads/unzipped'; //압축 해제된 폴더 경로
 
 //업로드시 저장될 경로, 파일 이름 지정하는 multer storage
 const storage = multer.diskStorage({
@@ -35,6 +36,42 @@ router.post('/file', (req, res) => {
   });
 });
 
+//기존에 업로드된 파일 삭제 Router
+router.post('/delete', (req, res) => {
+	
+	var deleteFolderRecursive = function(path) {
+		// existsSync: 파일이나 폴더가 존재하는 파악
+		if (fs.existsSync(path)) {                  
+
+			//unzippedPath 안 파일을 모두 삭제한다.
+			//readdir(path): 디렉토리 안의 파일의 이름을 배열로 반환
+			fs.readdirSync(path).forEach(function(file, index){   
+				var curPath = path + "/" + file;
+				
+				// lstat: stat값을 반환함, isDirectory(): 디렉토리인지 파악
+				if (fs.lstatSync(curPath).isDirectory()) {
+					deleteFolderRecursive(curPath); //재귀
+				} else {
+					fs.unlinkSync(curPath); //unlinkSync: 파일 삭제                     
+				}
+			});
+			fs.rmdirSync(path); //rmdirSync: 폴더 삭제                             
+		}
+	};
+	
+	deleteFolderRecursive(uploadedPath);
+	
+	fs.exists(uploadedPath, (exist) => {
+		if(!exist) {
+			fs.mkdirSync(uploadedPath); //삭제 성공시 upload될 폴더 생성
+			fs.mkdirSync(unzippedPath); //삭제 성공시 unzip될 폴더를 생성
+			return res.json({
+				success: true
+			});
+		}
+	});
+})
+
 //업로드된 파일 압축 해제 Router
 router.post('/unzip', (req, res) => {
 	
@@ -51,10 +88,10 @@ router.post('/unzip', (req, res) => {
 		fs.createReadStream(req.body.filePath)
 			.pipe(unzip.Parse())
 			.on('entry', function (entry) {
-			var fileName = entry.path;
-			var type = entry.type; // 'Directory' or 'File'
+			var filePath = entry.path;
+			var fileType = entry.type; // 'Directory' or 'File'
 		
-			fileInfo.push({name: fileName, fileType: type})
+			fileInfo.push({filePath: filePath, fileType: fileType})
 			
 		})
 		//Zip 내부 파일 Parse 종료 후
@@ -75,15 +112,16 @@ router.post('/unzip', (req, res) => {
 		//tar 압축해제 후 지정 경로에 저장
 		fs.createReadStream(req.body.filePath).pipe(
 			tar.x({
-				cwd: unzippedPath
+				cwd: unzippedPath,
+				strip: 1
 			})
 		)
 		//tar 내부 각 파일 Parse
 		.on('entry', function (entry) {
-			var fileName = entry.path;
-			var type = entry.type; // 'Directory' or 'File'
+			var filePath = entry.path;
+			var fileType = entry.type; // 'Directory' or 'File'
 		
-			fileInfo.push({name: fileName, fileType: type})
+			fileInfo.push({filePath: filePath, fileType: fileType})
 		})
 		//tar 내부 파일 Parse 종료 후
 		.on('close', function() {
