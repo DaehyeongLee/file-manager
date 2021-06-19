@@ -45,6 +45,8 @@ class FileUpload extends React.Component {
 		let formData = new FormData(); //업로드될 파일을 저장할 FormData
 		let uploadedFile = e.target.files[0];
 		
+		//console.log("fileSize", uploadedFile.size);
+		
 		formData.append('file', uploadedFile);
 		
 		this.setState({toggleTextArea: false}) //새로운 파일 업로드 시 Textarea 열려있다면 close
@@ -141,7 +143,7 @@ class FileUpload extends React.Component {
 		
 		return (
 			<div className = {style.FileUploadPage}>
-				<legend>File Upload</legend>
+				<h4>File Upload</h4>
 				<Row>
 					<Col>
 						{/*Left Side: 파일 업로드, 업로드된 zip, tar 압축 해제 후 파일 리스트 표시 */}

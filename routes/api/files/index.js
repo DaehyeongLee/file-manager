@@ -11,7 +11,7 @@ const unzippedPath = 'uploads/unzipped'; //압축 해제된 폴더 경로
 //업로드시 저장될 경로, 파일 이름 지정하는 multer storage
 const storage = multer.diskStorage({
 	destination: function (req, file, cb) {
-		cb(null, 'uploads/');
+		cb(null, uploadedPath);
 	},
 	filename: function (req, file, cb) {
 		cb(null, `${file.originalname}`);
@@ -61,15 +61,15 @@ router.post('/delete', (req, res) => {
 	
 	deleteFolderRecursive(uploadedPath);
 	
-	fs.exists(uploadedPath, (exist) => {
-		if(!exist) {
-			fs.mkdirSync(uploadedPath); //삭제 성공시 upload될 폴더 생성
+	if (!fs.existsSync(uploadedPath)){
+		
+		fs.mkdirSync(uploadedPath); //삭제 성공시 upload될 폴더 생성
+		if (!fs.existsSync(unzippedPath)) 
 			fs.mkdirSync(unzippedPath); //삭제 성공시 unzip될 폴더를 생성
-			return res.json({
-				success: true
-			});
-		}
-	});
+		return res.json({
+			success: true
+		});		
+	}
 })
 
 //업로드된 파일 압축 해제 Router
