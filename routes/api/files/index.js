@@ -142,7 +142,7 @@ router.post('/unzip', (req, res) => {
 router.post('/detail', (req, res) => {
 	const clickedItem = req.body.clickedItem;
 	
-	fs.readFile(`${unzippedPath}${clickedItem}`, 'utf-8', (err, data) => {
+	fs.readFile(`${unzippedPath}/${clickedItem}`, 'utf-8', (err, data) => {
 		if (err) throw err;
 		return res.json({
 				success: true,
@@ -156,7 +156,7 @@ router.post('/saveDetail', (req, res) => {
 	const clickedItem = req.body.clickedItem;
 	const clickedItemContent = req.body.clickedItemContent;
 	
-	fs.writeFile(`${unzippedPath}${clickedItem}`, clickedItemContent, 'utf-8', (err) => {
+	fs.writeFile(`${unzippedPath}/${clickedItem}`, clickedItemContent, 'utf-8', (err) => {
 		if (err) throw err;
 		return res.json({
 				success: true

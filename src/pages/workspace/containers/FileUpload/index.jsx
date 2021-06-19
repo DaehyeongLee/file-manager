@@ -3,7 +3,7 @@ import axios from 'axios';
 
 //import CenterLayout from 'components/CenterLayout';
 import style from './style.scss';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Container, Row, Col} from 'reactstrap';
 
 
 class FileUpload extends React.Component {
@@ -142,48 +142,53 @@ class FileUpload extends React.Component {
 		return (
 			<div className = {style.FileUploadPage}>
 				<legend>File Upload</legend>
-				{/*Left Side: 파일 업로드, 업로드된 zip, tar 압축 해제 후 파일 리스트 표시 */}
-				<div className = {style.FileUploadPage__leftSide}>
-					<Form>
-						<FormGroup>
-							<Label for="file">File</Label>
-							<Input 
-								type="file" 
-								id="file" 
-								accept=".zip, .tar" //확장자 zip, tar로 제한
-								onChange={this.onChangeFile}/>
-						</FormGroup>
-						
-					</Form>	
-					<div>
-						<ul>
-							{renderFileList}
-						</ul>
-					</div>						
-				</div>
-				
-				{/*Right Side: 파일 리스트중 하나 선택시 파일내용 수정field 표시 */}
-				<div className = {style.FileUploadPage__rightSide}>
-					{/* 파일중 하나 선택시 toggle->true 되고 textarea 표시*/}
-					{this.state.toggleTextArea &&
-						<Form onSubmit={this.onFormSubmitTextarea}>
-							<FormGroup>
-								<Label for="textarea">Text Area</Label>
-								<Input 
-									className={style.FileUploadPage__rightSide__textarea} 
-									type="textarea" 
-									id="textarea" 
-									value={this.state.clickedItemContent}
-									onChange={this.onChangeTestarea}
-									/>
-							</FormGroup>
-							<FormGroup>
-								<Button type="submit">Save</Button>
-							</FormGroup>
-						</Form>					
-					}
-				</div>
-				
+				<Row>
+					<Col>
+						{/*Left Side: 파일 업로드, 업로드된 zip, tar 압축 해제 후 파일 리스트 표시 */}
+						<div className = {style.FileUploadPage__leftSide}>
+							<Form>
+								<FormGroup>
+									<Label for="file">File</Label>
+									<Input 
+										type="file" 
+										id="file" 
+										accept=".zip, .tar" //확장자 zip, tar로 제한
+										onChange={this.onChangeFile}/>
+								</FormGroup>
+								
+							</Form>	
+							<div>
+								<ul>
+									{renderFileList}
+								</ul>
+							</div>		
+							</div>
+					</Col>
+					<Col>
+						{/*Right Side: 파일 리스트중 하나 선택시 파일내용 수정field 표시 */}
+						<div className = {style.FileUploadPage__rightSide}>
+							{/* 파일중 하나 선택시 toggle->true 되고 textarea 표시*/}
+							{this.state.toggleTextArea &&
+								<Form onSubmit={this.onFormSubmitTextarea}>
+									<FormGroup>
+										<Label for="textarea">Text Area</Label>
+										<Input 
+											className={style.FileUploadPage__rightSide__textarea} 
+											type="textarea" 
+											id="textarea" 
+											value={this.state.clickedItemContent}
+											onChange={this.onChangeTestarea}
+											/>
+									</FormGroup>
+									<FormGroup>
+										<Button type="submit">Save</Button>
+									</FormGroup>
+								</Form>										
+							}
+						</div>
+					</Col>
+				</Row>		
+
 			</div>
 		);
 	}
