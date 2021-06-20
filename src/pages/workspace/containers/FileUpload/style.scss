@@ -5,14 +5,17 @@
 	&__leftSide {
 	width: 25rem;
 	height: 20rem;
-	overflow: auto;
+
 	padding: 10px 20px;
 		&__li_file {
 			color: #1a73e8;
 			cursor: pointer;
 		}	
-	}
-	
+		&__fileList {
+			overflow: auto;
+			height: 15rem;
+		}
+	}	
 	&__rightSide {
 	width: 30rem;
 	height: 20rem;

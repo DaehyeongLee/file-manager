@@ -3,7 +3,7 @@ import axios from 'axios';
 
 //import CenterLayout from 'components/CenterLayout';
 import style from './style.scss';
-import { Button, Form, FormGroup, Label, Input, Container, Row, Col} from 'reactstrap';
+import { Button, Form, FormGroup, FormText, Label, Input, Container, Row, Col} from 'reactstrap';
 
 
 class FileUpload extends React.Component {
@@ -156,10 +156,14 @@ class FileUpload extends React.Component {
 										id="file" 
 										accept=".zip, .tar" //확장자 zip, tar로 제한
 										onChange={this.onChangeFile}/>
+									<FormText color="muted">
+										파일의 최대 허용 가능 크기는 xxx 입니다.<br />
+										채팅 기능 사용을 원하시면 오른쪽 상단 Dropdown을 통해 접근하세요.
+									</FormText>
 								</FormGroup>
 								
 							</Form>	
-							<div>
+							<div className = {style.FileUploadPage__leftSide__fileList}>
 								<ul>
 									{renderFileList}
 								</ul>

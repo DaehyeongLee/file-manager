@@ -19,11 +19,13 @@
   .style__FileUploadPage__leftSide__7j-axu {
     width: 25rem;
     height: 20rem;
-    overflow: auto;
     padding: 10px 20px; }
     .style__FileUploadPage__leftSide__li_file__1f4-hT {
       color: #1a73e8;
       cursor: pointer; }
+    .style__FileUploadPage__leftSide__fileList__28VPtH {
+      overflow: auto;
+      height: 15rem; }
   .style__FileUploadPage__rightSide__3auc9G {
     width: 30rem;
     height: 20rem;

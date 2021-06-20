@@ -4,11 +4,15 @@ import Header from './containers/Header';
 import FileUpload from './containers/FileUpload';
 import Chat from './containers/Chat';
 
-const Workspace = () => (
+const Workspace = (props) => (
 	<div>
-		<Header />
-		<FileUpload />
-		<Chat />
+		<Header {...props}/>
+		{props.page == "landing" &&
+			<FileUpload />
+		}
+		{props.page == "chat" && 
+			<Chat />
+		}
 	</div>
 );
 

@@ -5,7 +5,8 @@ import Workspace from 'pages/workspace';
 
 const App = props => (
 	<Switch>
-		<Route exact path={['/', '/workspace']} render={() => <Workspace {...props} />} />
+		<Route exact path={['/', '/workspace']} render={() => <Workspace {...props} page = "landing"/>} />
+		<Route exact path={['/chat']} render={() => <Workspace {...props} page = "chat"/>} />
 	</Switch>
 );
 export default App;

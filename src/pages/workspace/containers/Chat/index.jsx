@@ -5,6 +5,7 @@ import style from './style.scss';
 
 class Chat extends React.Component {
 	constructor(props) {
+		console.log("chat props:", props)
 		super(props);
 		this.state = {
 			

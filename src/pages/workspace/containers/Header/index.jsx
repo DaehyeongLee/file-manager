@@ -24,6 +24,15 @@ class Header extends React.Component {
 		window.location.href = '/api/account/signout';
 	};
 
+	onPage = () => {
+		//현재 페이지가 chat일 경우 메뉴에는 Landing이 보이도록 함
+		if (this.props.page == "chat")
+			window.location.href = '/workspace';
+		//현재 페이지가 Landing일 경우 메뉴에는 Chat이 보이도록 함
+		else if (this.props.page == "landing")
+			window.location.href = '/chat';
+	};
+
 	render() {
 		const { userId } = this.state;
 		return (
@@ -33,6 +42,7 @@ class Header extends React.Component {
 						{userId}
 					</DropdownToggle>
 					<DropdownMenu right>
+						<DropdownItem onClick={this.onPage}>{this.props.page == "landing" ? "Chat" : "Landing"}</DropdownItem>
 						<DropdownItem onClick={this.signOut}>로그아웃</DropdownItem>
 					</DropdownMenu>
 				</UncontrolledDropdown>
