@@ -1,6 +1,27 @@
 .ChatPage {
-	width: 80%;
+	width: 50%;
+	height: 700px;
+	border: 2px solid gray;
+	border-radius: 3px;
+	margin: 0px 10px;
+	&__chatList {
+		padding: 10px 20px;
+		height: 640px;
+	}
+	&__chatForm{
+		display: flex;
+  		height: 60px;
+  		justify-content: space-between;
+  		align-items: center;
+  		padding: 10px;
+		&__chatInput{
+			flex: 8;
+  			display: flex;
+  			height: 100%;
+		}
+	}
+}
+.Title {
 	padding: 20px;
-
 }
 	

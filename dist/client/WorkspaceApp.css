@@ -34,6 +34,30 @@
       height: 13rem !important; }
 
 .style__ChatPage__19y2vP {
-  width: 80%;
+  width: 50%;
+  height: 700px;
+  border: 2px solid gray;
+  border-radius: 3px;
+  margin: 0px 10px; }
+  .style__ChatPage__chatList__1hmF6_ {
+    padding: 10px 20px;
+    height: 640px; }
+  .style__ChatPage__chatForm__13dIQF {
+    display: -ms-flexbox;
+    display: flex;
+    height: 60px;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+    padding: 10px; }
+    .style__ChatPage__chatForm__chatInput__ByEHCp {
+      -ms-flex: 8;
+          flex: 8;
+      display: -ms-flexbox;
+      display: flex;
+      height: 100%; }
+
+.style__Title__3OHC1V {
   padding: 20px; }
 
