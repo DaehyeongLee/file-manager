@@ -41,7 +41,41 @@
   margin: 0px 10px; }
   .style__ChatPage__chatList__1hmF6_ {
     padding: 10px 20px;
-    height: 640px; }
+    height: 640px;
+    overflow: auto; }
+    .style__ChatPage__chatList__username__1jxJAt {
+      margin: 5px 0px;
+      font-size: 14px; }
+    .style__ChatPage__chatList__mytext__rhsbR7 {
+      margin: 0;
+      font-size: 16px;
+      color: white;
+      width: 100%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+          align-items: center;
+      padding: 5px 10px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      min-height: 30px;
+      border-radius: 5px;
+      background-color: #c8c8c8; }
+    .style__ChatPage__chatList__usertext__1Xj-fg {
+      margin: 0;
+      font-size: 16px;
+      color: white;
+      width: 100%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+          align-items: center;
+      padding: 5px 10px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      min-height: 30px;
+      border-radius: 5px;
+      background-color: #858585; }
   .style__ChatPage__chatForm__13dIQF {
     display: -ms-flexbox;
     display: flex;
@@ -57,6 +91,9 @@
       display: -ms-flexbox;
       display: flex;
       height: 100%; }
+      .style__ChatPage__chatForm__chatInput__userTo__27pKW3 {
+        padding: 5px 10px;
+        font-size: 18px; }
 
 .style__Title__3OHC1V {
   padding: 20px; }

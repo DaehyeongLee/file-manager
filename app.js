@@ -68,7 +68,12 @@ const main = () => {
 			socket.on('send message', (item) => {
 				const msg = item.userFrom + ' : ' + item.message;
 				console.log(msg);
-				io.emit('receive message', {userFrom: item.userFrom, message: item.message});
+				//Socket Io 이벤트 발생
+				if(item.userTo =='All') socket.broadcast.emit('receive message', {userFrom: item.userFrom, message: item.message}); //나를 제외한 전체에게 메시지 보내기
+				else {
+					//귓속말 대상 상대에게만 메시지 보내기
+					io.emit('receive message', {userFrom: item.userFrom, message: item.message});
+				}				
 			});
 			socket.on('disconnect', function () {
 				console.log('user disconnected: ', socket.id);

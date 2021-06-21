@@ -1,3 +1,17 @@
+@mixin chatText($bg-color) {
+	margin: 0;
+	font-size: 16px;
+	color: white;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 5px 10px;
+	box-sizing: border-box;			
+	min-height: 30px;
+	border-radius: 5px;
+	background-color: $bg-color;
+}
+
 .ChatPage {
 	width: 50%;
 	height: 700px;
@@ -7,6 +21,19 @@
 	&__chatList {
 		padding: 10px 20px;
 		height: 640px;
+		overflow: auto;
+		&__username {
+			margin: 5px 0px;
+  			font-size: 14px;
+		}
+		
+		&__mytext {
+			@include chatText(rgb(200, 200, 200));
+		}
+		&__usertext {
+			@include chatText(rgb(133, 133, 133));
+		}
+		
 	}
 	&__chatForm{
 		display: flex;
@@ -18,10 +45,13 @@
 			flex: 8;
   			display: flex;
   			height: 100%;
+			&__userTo {
+				padding: 5px 10px;
+				font-size: 18px;
+			}
 		}
 	}
 }
 .Title {
 	padding: 20px;
 }
-	
