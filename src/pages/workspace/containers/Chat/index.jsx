@@ -13,7 +13,8 @@ class Chat extends React.Component {
 		super(props);
 		this.state = {
 			userFrom: "",
-			message: "" //입력한 메시지
+			message: "", //입력한 메시지
+			messageList: []
 		};
 	}
 
@@ -30,6 +31,9 @@ class Chat extends React.Component {
 		// 					<p className="message-text">{item.message}</p>
 		// 				</div>
 		// )} 
+		socket.on('receive message', (item) => {
+			this.setState({messageList: [...this.state.messageList, { userFrom: item.userFrom, message: item.message }]});
+    	})
 	}
 	
 	onFormSubmitMessage = e => {
@@ -44,7 +48,12 @@ class Chat extends React.Component {
 			<h4 className={style.Title}>Chat</h4>
 			<div className = {style.ChatPage}>
 				<div className={style.ChatPage__chatList}>
-					Message List
+					{this.state.messageList.map((item, index) =>
+						<div key={index} className="message">
+							<p className="username">{item.userFrom.toUpperCase()}</p>
+							<p className="message-text">{item.message}</p>
+						</div>
+					)} 
       			</div>
       			<Form className={style.ChatPage__chatForm}
         			onSubmit={this.onFormSubmitMessage}>
