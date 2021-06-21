@@ -11,7 +11,7 @@ const Workspace = (props) => (
 			<FileUpload />
 		}
 		{props.page == "chat" && 
-			<Chat />
+			<Chat {...props}/>
 		}
 	</div>
 );

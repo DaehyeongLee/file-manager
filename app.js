@@ -8,6 +8,8 @@ const redis = require('redis');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
+const Io = require('socket.io'); //Socket Io
+
 const middlewares = require('./middlewares');
 
 const initExpress = redisClient => {
@@ -57,6 +59,21 @@ const main = () => {
 	initMongo().then(() => {
 		const redisClient = initRedis();
 		const server = initExpress(redisClient);
+		
+		// socketio 생성후 서버 인스턴스 사용
+		const io = Io(server);
+
+		// socketio 문법
+		io.on('connection', socket => {
+			socket.on('send message', (item) => {
+				const msg = item.userFrom + ' : ' + item.message;
+				console.log(msg);
+				io.emit('receive message', {userFrom: item.userFrom, message: item.message});
+			});
+			socket.on('disconnect', function () {
+				console.log('user disconnected: ', socket.id);
+			});
+		});
 	});
 };
 
