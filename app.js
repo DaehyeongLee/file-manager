@@ -62,21 +62,32 @@ const main = () => {
 		
 		// socketio 생성후 서버 인스턴스 사용
 		const io = Io(server);
+		
+		// User Name : Socket Id 저장 배열
+		let username = [];
 
-		// socketio 문법
+		// socket io
 		io.on('connection', socket => {
+			
 			socket.on('send message', (item) => {
-				const msg = item.userFrom + ' : ' + item.message;
-				console.log(msg);
-				//Socket Io 이벤트 발생
-				if(item.userTo =='All') socket.broadcast.emit('receive message', {userFrom: item.userFrom, message: item.message}); //나를 제외한 전체에게 메시지 보내기
+				
+				username[item.userFrom] = item.id; //username과 id를 묶어 저장해준다.
+				
+				//const msg = item.userFrom + ' : ' + item.message;
+				//console.log(msg);
+				
+				//전체를 대상으로 메시지 보내기
+				if(item.userTo =='All') socket.broadcast.emit('receive message', {userFrom: item.userFrom, message: item.message, isWhisper: false}); //나를 제외한 전체에게 메시지 보내기
 				else {
 					//귓속말 대상 상대에게만 메시지 보내기
-					io.emit('receive message', {userFrom: item.userFrom, message: item.message});
+					const userToId= username[item.userTo] //귓속말 보낼 대상의 socket Id를 가져온다.
+					if (userToId != null) 
+						io.to(userToId).emit('receive message', {userFrom: item.userFrom, message: item.message, isWhisper: true});
 				}				
 			});
-			socket.on('disconnect', function () {
+			socket.on('disconnect', (item) => {
 				console.log('user disconnected: ', socket.id);
+				//delete username[item.userFrom];
 			});
 		});
 	});

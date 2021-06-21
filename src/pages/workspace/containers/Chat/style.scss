@@ -25,6 +25,7 @@
 		&__username {
 			margin: 5px 0px;
   			font-size: 14px;
+			cursor: pointer;
 		}
 		
 		&__mytext {
@@ -48,6 +49,7 @@
 			&__userTo {
 				padding: 5px 10px;
 				font-size: 18px;
+				cursor: pointer;
 			}
 		}
 	}
