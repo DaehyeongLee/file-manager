@@ -35,6 +35,7 @@ class Chat extends React.Component {
 		//Socket Error
 		socket.on("connect_error", (err) => {
   			console.log(`connect_error due to ${err.message}`);
+			socket.disconnect(); //서버와 연결 끊길시 disconnect
 		});
 		
 		this.onScrollBottom(); //스크롤 최하단으로
