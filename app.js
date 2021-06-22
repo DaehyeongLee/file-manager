@@ -77,12 +77,16 @@ const main = () => {
 				//console.log(msg);
 				
 				//전체를 대상으로 메시지 보내기
-				if(item.userTo =='All') socket.broadcast.emit('receive message', {userFrom: item.userFrom, message: item.message, isWhisper: false}); //나를 제외한 전체에게 메시지 보내기
+				if(item.userTo =='All') {
+					socket.broadcast.emit('receive message', {userFrom: item.userFrom, message: item.message, userTo: item.userTo, isWhisper: false}); //나를 제외한 전체에게 메시지보내기
+					//io.emit('receive message', {userFrom: item.userFrom, message: item.message, userTo: item.userTo, isWhisper: false})
+					//console.log("All send - Server")
+				}
 				else {
 					//귓속말 대상 상대에게만 메시지 보내기
 					const userToId= username[item.userTo] //귓속말 보낼 대상의 socket Id를 가져온다.
 					if (userToId != null) 
-						io.to(userToId).emit('receive message', {userFrom: item.userFrom, message: item.message, isWhisper: true});
+						io.to(userToId).emit('receive message', {userFrom: item.userFrom, message: item.message, userTo: item.userTo, isWhisper: true});
 				}				
 			});
 			socket.on('disconnect', (item) => {

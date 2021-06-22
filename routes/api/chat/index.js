@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const util = require('./util');
 const Error = require('../util/error');
 
 const chat = require('../../../models/chat');
@@ -9,9 +8,9 @@ const add = async (message, userFrom, userTo, isWhisper) => {
 		throw new Error.InvalidRequest();
 	}
 
-	const message = new chat({ message, userFrom, userTo, isWhisper });
+	const newMessage = new chat({ message, userFrom, userTo, isWhisper });
 
-	await message.save();
+	await newMessage.save();
 	return true;
 };
 //보낸 메시지를 저장
@@ -32,6 +31,16 @@ router.get('/getMessages', (req, res) => {
     .exec((err, messages) => {
         if (err) return res.status(400).send(err)
         return res.status(200).json({success: true, messages})
+    })
+})
+//저장된 메시지를 삭제
+router.get('/removeMessages', (req, res) => {
+    
+    chat.remove({}) 
+    //.populate('') 
+    .exec((err, messages) => {
+        if (err) return res.status(400).send(err)
+        return res.status(200).json({success: true})
     })
 })
 
