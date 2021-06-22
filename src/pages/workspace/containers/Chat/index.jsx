@@ -160,7 +160,6 @@ class Chat extends React.Component {
 				<Row>
 					<Col>
 						<FormText className={style.subTitle} color="muted">
-							채팅을 시작하면 대화에 참여하게 됩니다.<br />
 							귓속말을 보내고 싶은 상대의 아이디를 클릭하면 귓속말을 보낼 수 있습니다.<br />
 							전체 메시지로 바꾸고 싶으시다면 입력창 왼쪽 아이디를 클릭하세요.
 						</FormText>
