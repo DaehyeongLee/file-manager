@@ -4,7 +4,7 @@ const Error = require('../util/error');
 const chat = require('../../../models/chat');
 
 const add = async (message, userFrom, userTo, isWhisper) => {
-	if (!message || !userFrom || !userTo || isWhisper) {
+	if (!message || !userFrom || !userTo) {
 		throw new Error.InvalidRequest();
 	}
 

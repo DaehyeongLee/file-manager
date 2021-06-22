@@ -34,6 +34,9 @@ class Chat extends React.Component {
 		//Socket Io 정의
 		socket.on('receive message', (item) => {
 			
+			//서버 Socket으로부터 온 메시지를 state에 저장
+			this.setState({messageList: [...this.state.messageList, { message: item.message, userFrom: item.userFrom, userTo: item.userTo, isWhisper: item.isWhisper}]}); 
+			
 			//console.log("All receive - Client")
 			
 			//서버 Socket으로부터 온 메시지를 DB에 저장
@@ -52,8 +55,7 @@ class Chat extends React.Component {
 			// 		alert('메시지를 데이터베이스에 저장하는 것에 실패했습니다.')
 			// 	}
 			// })
-			//서버 Socket으로부터 온 메시지를 state에 저장
-			this.setState({messageList: [...this.state.messageList, { message: item.message, userFrom: item.userFrom, userTo: item.userTo, isWhisper: item.isWhisper}]}); 
+			
 			
     	})
 		//Socket Error
@@ -68,13 +70,17 @@ class Chat extends React.Component {
 	onFormSubmitMessage = e => {
 		
 		e.preventDefault();
+		this.setState({message: ""}) //메시지 전송시 Input field안 메시지 초기화
+		this.setState(
+			{messageList: [...this.state.messageList, { userFrom: this.state.userFrom, message: this.state.message, userTo: this.state.userTo, isWhisper: this.state.userTo == "All" ? false : true}]}
+		); //내가 보낸 메시지를 화면에 표시하게끔 함
 		
 		//보낸 메시지를 DB에 저장
 		axios.post('/api/chat/newMessage', {
-				message: this.state.message,
-				userFrom: this.state.userFrom,
-				userTo: this.state.userTo,	
-				isWhisper: this.state.userTo == "All" ? false : true
+				message: this.state.message, //메시지 내용
+				userFrom: this.state.userFrom, //메시지 보낸 사람
+				userTo: this.state.userTo, //메시지 받는 대상
+				isWhisper: this.state.userTo == "All" ? false : true //귓속말 여부
 				
 			}).then((response)=> {
 				
@@ -85,9 +91,6 @@ class Chat extends React.Component {
 				}
 			})
 		
-		this.setState({message: ""}) //메시지 전송시 Input field안 메시지 초기화
-		this.setState({messageList: [...this.state.messageList, { userFrom: this.state.userFrom, message: this.state.message}]}); //내가 보낸 메시지를 화면에 표시하게끔 함
-		
 		//Socket Io event 발생
     	socket.emit('send message', { id: socket.id, userTo: this.state.userTo, userFrom: this.state.userFrom, message: this.state.message });
 		
@@ -97,7 +100,7 @@ class Chat extends React.Component {
 	//전체 메시지 불러오는 함수
 	setMessageList = () => {
 		axios.get('/api/chat/getMessages').then((response)=> {
-				console.log("getMessages func - Client")
+				//console.log("getMessages func - Client")
 				
 				if(response.data.success) {
 					//console.log("Message save?", response.data);
@@ -120,7 +123,7 @@ class Chat extends React.Component {
 	
 	//유저 이름 클릭시 귓속말 상대를 클릭된 이름으로 설정
 	onClickUserTo = value => {		
-		if (value !== "Me")
+		if (value !== this.state.userFrom)
 			this.setState({userTo: value})
 		else 
 			this.setState({userTo: "All"})
@@ -138,6 +141,30 @@ class Chat extends React.Component {
 					alert('전체 메시지를 삭제하는 것에 실패했습니다.')
 				}
 			})
+	}
+	
+	renderChatList = (item, index) => {
+		{/*전체 Message List중 userTo가 All이거나 현재 userFrom이랑 같은 경우의 아이템만 render => DB에서 불러온 데이터에서 다른유저대상 귓속말 필터 위함*/}	
+		if(item.userTo == "All" || item.userFrom == this.state.userFrom || item.userTo == this.state.userFrom) {
+			
+			return	<div key={index}>
+				{/*유저 이름 표시: 귓속말일 경우 귓속말임을 표시해준다.
+				귓속말일 경우: {보낸사람}님의 귓속말
+				전체 채팅일 경우: {보낸사람} 단, 보낸사람이 자신일 경우는 Me로 표시
+				*/}
+				<p onClick={(value) => this.onClickUserTo(item.userFrom)} 
+					className={style.ChatPage__chatList__username}>
+					{item.userFrom == this.state.userFrom ? "Me" : item.isWhisper ? `${item.userFrom}님의 귓속말` : item.userFrom}
+				</p>
+				{/*내가 보낸 메시지와 받은 메시지 배경색 다르게 처리*/}
+				{/*메시지 개수 늘어나 스크롤 생길시 해당 포지션으로 스크롤 이동*/}
+				<p 
+					className={item.userFrom == this.state.userFrom ? style.ChatPage__chatList__mytext : style.ChatPage__chatList__usertext}
+					ref={(ref) => {this.messageEnd = ref;} } 
+					>{item.message}</p>
+			</div>
+			
+		}
 	}
 
 	render() {
@@ -160,23 +187,9 @@ class Chat extends React.Component {
 			<div className = {style.ChatPage}>
 				<div className={style.ChatPage__chatList}>
 					{/*전체 채팅리스트 배열로부터 채팅 목록을 화면에 표시*/}
-					{this.state.messageList.map((item, index) =>
-						<div key={index}>
-							{/*유저 이름 표시: 귓속말일 경우 귓속말임을 표시해준다.
-							귓속말일 경우: {보낸사람}님의 귓속말
-							전체 채팅일 경우: {보낸사람} 단, 보낸사람이 자신일 경우는 Me로 표시
-							*/}
-							<p onClick={(value) => this.onClickUserTo(item.userFrom)} 
-								className={style.ChatPage__chatList__username}>
-								{item.isWhisper ? `${item.userFrom}님의 귓속말` : item.userFrom == this.state.userFrom ? "Me" : item.userFrom}
-							</p>
-							{/*내가 보낸 메시지와 받은 메시지 배경색 다르게 처리*/}
-							{/*메시지 개수 늘어나 스크롤 생길시 해당 포지션으로 스크롤 이동*/}
-							<p 
-								className={item.userFrom == this.state.userFrom ? style.ChatPage__chatList__mytext : style.ChatPage__chatList__usertext}
-								ref={(ref) => {this.messageEnd = ref;} } 
-								>{item.message}</p>
-						</div>
+					{this.state.messageList.map((item, index) => 
+						this.renderChatList(item, index)
+						
 					)} 
       			</div>
       			<Form className={style.ChatPage__chatForm}
