@@ -69,18 +69,18 @@ const main = () => {
 		// socket io
 		io.on('connection', socket => {
 			
+			socket.on('register user', (item) => {
+				username[item.userFrom] = item.id; //username과 id를 묶어 저장해준다.
+			})
+			
 			socket.on('send message', (item) => {
 				
 				username[item.userFrom] = item.id; //username과 id를 묶어 저장해준다.
-				
-				//const msg = item.userFrom + ' : ' + item.message;
-				//console.log(msg);
-				
+		
 				//전체를 대상으로 메시지 보내기
 				if(item.userTo =='All') {
 					socket.broadcast.emit('receive message', {userFrom: item.userFrom, message: item.message, userTo: item.userTo, isWhisper: false}); //나를 제외한 전체에게 메시지보내기
 					//io.emit('receive message', {userFrom: item.userFrom, message: item.message, userTo: item.userTo, isWhisper: false})
-					//console.log("All send - Server")
 				}
 				else {
 					//귓속말 대상 상대에게만 메시지 보내기
