@@ -92,6 +92,7 @@ const main = () => {
 			socket.on('disconnect', (item) => {
 				console.log('user disconnected: ', socket.id);
 				//delete username[item.userFrom];
+				socket.disconnect();
 			});
 		});
 	});

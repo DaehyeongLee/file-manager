@@ -22,6 +22,9 @@ const upload = multer({ storage: storage }).single('file'); //업로드시 사�
 //파일 업로드 Router
 router.post('/file', (req, res) => {
 	
+	if (!fs.existsSync(uploadedPath)) 
+		fs.mkdirSync(uploadedPath); //업로드 루트 경로에 폴더가 없을시 폴더 생성
+	
   upload(req, res, (err) => {
     if (err) {
       return req.json({ success: false, err });
@@ -84,14 +87,13 @@ router.post('/unzip', (req, res) => {
 	
 	if (!fs.existsSync(unzippedPath)) 
 		fs.mkdirSync(unzippedPath); //unzip될 경로에 폴더가 없을시 폴더 생성
-	fs.mkdirSync(`${unzippedPath}/${fileName}`); //unzip될 경로안에 파일이름으로 된 폴더 생성. 압축해제된 파일들은 각 폴더 내로 들어감
+	if (!fs.existsSync(`${unzippedPath}/${fileName}`)) 
+		fs.mkdirSync(`${unzippedPath}/${fileName}`); //unzip될 경로안에 파일이름으로 된 폴더 생성. 압축해제된 파일들은 각 폴더 내로 들어감
 		
 	//파일이 zip일 경우
 	//압축해제후 디렉토리명: unzipped/{fileName}
 	if (fileExtension == 'zip') {
-		//Zip 압축해제 후 지정 경로에 저장
-		fs.createReadStream(req.body.filePath).pipe(unzip.Extract({ path: `${unzippedPath}/${fileName}` }))
-
+		
 		//Zip 내부 각 파일 Parse		
 		fs.createReadStream(req.body.filePath)
 			.pipe(unzip.Parse())
@@ -99,7 +101,20 @@ router.post('/unzip', (req, res) => {
 			var filePath = entry.path;
 			var fileType = entry.type; // 'Directory' or 'File'
 		
-			fileInfo.push({filePath: filePath, fileType: fileType})
+			fileInfo.push({filePath: filePath, fileType: fileType}) //Client로 보낼 내용 push
+			
+			if (filePath) {
+				if(fileType == "Directory") {
+					//파일이 디렉토리인 경우 디렉토리 생성
+					fs.mkdirSync(`${unzippedPath}/${fileName}/${filePath}`);
+				} else  {
+					//파일이 파일인 경우 파일 생성
+					entry.pipe(fs.createWriteStream(`${unzippedPath}/${fileName}/${filePath}`));
+				}
+			} else {
+				entry.autodrain();
+			}
+			
 		})
 		//Zip 내부 파일 Parse 종료 후
 		.on('close', function() {

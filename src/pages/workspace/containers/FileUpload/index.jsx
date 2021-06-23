@@ -11,7 +11,7 @@ class FileUpload extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { 
-			file : {}, //zip or tar 파일의 전체 정보
+			file : {}, //zip or tar 파일의 전체 정보  
 			filePath: "", //zip or tar 파일 경로
 			fileName: "", //zip or tar 파일의 이름
 			fileList: [], //압축 해제된 파일의 List
@@ -44,7 +44,10 @@ class FileUpload extends React.Component {
 		let formData = new FormData(); //업로드될 파일을 저장할 FormData
 		let uploadedFile = e.target.files[0];
 		
-		//console.log("fileSize", uploadedFile.size);
+		if (uploadedFile) {
+			console.log("fileSize", uploadedFile);
+		}
+			
 		
 		formData.append('file', uploadedFile);
 		
@@ -72,7 +75,7 @@ class FileUpload extends React.Component {
 			if (response.data.filePath.length > 0)
 				axios.post('/api/files/unzip', {filePath: this.state.filePath, fileName: this.state.fileName}).then((response)=> {
 					if(response.data.success) {
-						//console.log("response.data.fileInfo", response.data.fileInfo);
+						console.log("response.data.fileInfo", response.data.fileInfo);
 						this.setState({fileList: response.data.fileInfo})
 					} else {
 						alert('압축을 해제하는데 실패했습니다.')
