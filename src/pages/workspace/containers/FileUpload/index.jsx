@@ -19,7 +19,6 @@ class FileUpload extends React.Component {
 			clickedItem: "", //파일 List중 클릭된 파일의 Path
 			clickedItemContent: "" //파일 List중 클릭된 파일의 content
 		}
-
 	}
 	
 	//Textarea밑 저장 버튼 클릭시 호출
@@ -27,7 +26,7 @@ class FileUpload extends React.Component {
 		e.preventDefault() // Stop form submit
 		
 		//변경한 파일 내용 저장
-		axios.post('/api/files/saveDetail', {clickedItemContent: this.state.clickedItemContent, clickedItem: this.state.clickedItem}).then((response)=> {
+		axios.post('/api/files/saveDetail', {clickedItemContent: this.state.clickedItemContent, clickedItem: this.state.clickedItem , fileName: this.state.fileName}).then((response)=> {
 			if (response.data.success) { 
 				alert ("파일 내용을 수정하는 것에 성공했습니다.")
 				
@@ -53,44 +52,42 @@ class FileUpload extends React.Component {
 		
 		
 		//이전 업로드됐던 파일들을 모두 삭제
-		axios.post('/api/files/delete').then((response)=> {
+		//axios.post('/api/files/delete').then((response)=> {
 			
-			//삭제 성공
-			if(response.data.success) {
+		//삭제 성공
+		//if(response.data.success) {
 				
-				//삭제 성공 후 업로드 파일 저장, 업로드된 파일의 압축 해제 수행
-				axios.post('/api/files/file', formData).then((response) => {
-					if (response.data.success) {
+		//삭제 성공 후 업로드 파일 저장, 업로드된 파일의 압축 해제 수행
+		axios.post('/api/files/file', formData).then((response) => {
+			if (response.data.success) {
 						
-						//업로드된 zip or tar 파일에 대한 정보 state에 저장
-						this.setState({
-							file : uploadedFile,
-							filePath : response.data.filePath,
-							fileName : response.data.fileName
-						});
+				//업로드된 zip or tar 파일에 대한 정보 state에 저장
+				this.setState({
+					file : uploadedFile,
+					filePath : response.data.filePath,
+					fileName : response.data.fileName
+				});
 						
-						//파일이 올바르게 선택되었을때 unzip 실행
-						if (response.data.filePath.length > 0)
-							axios.post('/api/files/unzip', {filePath: this.state.filePath}).then((response)=> {
-								if(response.data.success) {
-									//console.log("response.data.fileInfo", response.data.fileInfo);
-									this.setState({fileList: response.data.fileInfo})
-								} else {
-									alert('압축을 해제하는데 실패했습니다.')
-								}
-							})
-						
+			//파일이 올바르게 선택되었을때 unzip 실행
+			if (response.data.filePath.length > 0)
+				axios.post('/api/files/unzip', {filePath: this.state.filePath, fileName: this.state.fileName}).then((response)=> {
+					if(response.data.success) {
+						//console.log("response.data.fileInfo", response.data.fileInfo);
+						this.setState({fileList: response.data.fileInfo})
 					} else {
-						alert('업로드하는데 실패했습니다.');
-						//console.log(response.data.err);
+						alert('압축을 해제하는데 실패했습니다.')
 					}
-				});				
+				})
+						
 			} else {
-				alert('기존 업로드된 파일의 삭제를 실패했습니다.')
+				alert('업로드하는데 실패했습니다.');
 			}
+		});				
+			//} else {
+			//	alert('기존 업로드된 파일의 삭제를 실패했습니다.')
+			//}
 			
-		})			
-		
+		//})			
 	}
 	
 	//Textarea content 수정시 호출
@@ -105,7 +102,7 @@ class FileUpload extends React.Component {
 		this.setState({clickedItem: value});
 		
 		//파일안 내용 불러오기
-		axios.post('/api/files/detail', {clickedItem: value}).then((response)=> {
+		axios.post('/api/files/detail', {clickedItem: value, fileName: this.state.fileName}).then((response)=> {
 			
 			if(response.data.success) {
 				//Click시 Textarea 보이도록 함. Textarea에는 선택된 파일 내용이 value로 들어가있음
@@ -113,9 +110,7 @@ class FileUpload extends React.Component {
 			} else {
 				alert('선택된 파일 내용을 읽어오는 것에 실패했습니다.')
 			}
-			
 		})		
-		
 	}
 	
 	render() {
@@ -137,9 +132,7 @@ class FileUpload extends React.Component {
 				else //Type: Directory - 선택 불가
 					return (<li key={index}>{item.filePath}</li>)
 			}
-			
 		});
-		
 		
 		return (
 			<div className = {style.FileUploadPage}>
@@ -194,7 +187,6 @@ class FileUpload extends React.Component {
 						</div>
 					</Col>
 				</Row>		
-
 			</div>
 		);
 	}

@@ -31,9 +31,7 @@ class Chat extends React.Component {
 			//채팅 페이지에 들어온 유저의 Socket Id를 등록 (채팅 참가)
 			socket.emit('register user', { id: socket.id, userFrom: data }); 
 		});
-	}
-	
-	componentWillMount() {
+		
 		//Socket Io 정의
 		socket.on('receive message', (item) => {			
 			//서버 Socket으로부터 온 메시지를 state에 저장
@@ -45,7 +43,7 @@ class Chat extends React.Component {
 			socket.disconnect();
 		});
 	}
-	
+
 	//메시지 submit시
 	onFormSubmitMessage = e => {
 		
@@ -79,8 +77,7 @@ class Chat extends React.Component {
 			})
 		
 		
-		this.onScrollBottom(); //스크롤 최하단으로
-			
+		this.onScrollBottom(); //스크롤 최하단으로			
 		this.setState({message: ""}) //메시지 전송시 Input field안 메시지 초기화			
 		}
 	}
@@ -153,7 +150,6 @@ class Chat extends React.Component {
 	}
 
 	render() {
-		
 		return (
 			<div>
 				<h4 className={style.Title}>Chat</h4>
@@ -168,7 +164,6 @@ class Chat extends React.Component {
 						<Button onClick={() => this.onClickRemove()}>전체삭제(테스트용)</Button>
 					</Col>
 				</Row>
-			
 				<div className = {style.ChatPage}>
 					<div className={style.ChatPage__chatList}>
 						{/*전체 채팅리스트 배열로부터 채팅 목록을 화면에 표시*/}
@@ -202,5 +197,4 @@ class Chat extends React.Component {
 		
 	}
 }
-
 export default Chat;
